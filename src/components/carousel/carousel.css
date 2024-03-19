@@ -1,0 +1,29 @@
+.carousel {
+    display: flex;
+    flex-direction: row; 
+    
+}
+
+.property {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    background-color: yellow;
+}
+
+.img_container {
+    position: relative;
+}
+
+.property_img {
+    width: 300px;
+    height: 300px;
+}
+
+.property_price {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+

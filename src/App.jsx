@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import {
-  Hero, FeaturedListings, Properties
+  Hero, FeaturedListings, Locations
 } from "./containers";
-
+import {
+  Carousel
+} from "./components";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +14,8 @@ function App() {
       
       <Hero />
       <FeaturedListings />
-      <Properties />
+      <Carousel />
+      <Locations />
       {/* <div className="gradient__bg">
         <Navbar />
         <Header />

@@ -1,7 +1,5 @@
 import React from "react";
 import logo from '../../assets/logo.svg'
-// import Article from '../../components/article/Article';
-// import { blog01, blog02, blog03, blog04, blog05 } from './imports';
 import "./navbar.css";
 
 const Navbar = () => {
