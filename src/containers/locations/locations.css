@@ -19,10 +19,7 @@ p {
 }
 
 .locations_imgs_row {
-    display: flex;
-    flex-direction: row;
     position: relative;
-    align-items: center;
     justify-content: space-between;
     width: 100%;
 }

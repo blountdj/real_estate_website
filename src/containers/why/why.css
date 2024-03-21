@@ -1,0 +1,36 @@
+div.why {
+    /* height: 1000px; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+div.why_components {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+h2.why_h2 {
+    font-family: var(--font-family-asul);
+    font-weight: 700;
+    line-height: 25px;
+    font-size: 21px; 
+}
+
+p.why_p {
+    font-family: var(--font-family-rambla);
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 22px; 
+    width: 60%;
+    text-align: center;
+}
+

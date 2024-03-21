@@ -30,16 +30,12 @@
 }
 
 .hero_section_text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100%;
     width: 100%;
 }
 
 
-h1 {
+h1.hero_section_text_h1 {
     font-family: var(--font-family-asul);
     position: relative;
     text-transform: uppercase;
@@ -47,7 +43,7 @@ h1 {
     z-index: 2;
 }
 
-P {
+p.hero_section_text_p {
     font-family: var(--font-family-rambla);
     position: relative;
     font-size: 24px;

@@ -1,0 +1,45 @@
+div.sell_property {
+    background-image: url('../../assets/sell_property.png');
+    background-size: cover; /* This property ensures that the background image covers the entire element */
+    background-position: center; 
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+div.sell_property_container {
+    margin-left: 150px;
+    display: flex;
+    width: 500px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2.sell_property_container_h3 {
+    color: white;
+    font-family: var(--font-family-asul);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+p.sell_property_container_p {
+    text-align: left;
+    font-family: var(--font-family-rambla);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    width: auto;
+}
+
+button.sell_property_container_btn {
+    color: white;
+    border: 1px solid white; /* Optional: Remove button border */
+    padding: 10px 20px;
+    font-weight: 400;
+}

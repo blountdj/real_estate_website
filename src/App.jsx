@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {
-  Hero, FeaturedListings, Locations
+  Hero, FeaturedListings, Locations, SellProperty, Reviews, Why, Campolivar, Services, RealEstate, Footer
 } from "./containers";
 import {
   Carousel
@@ -11,22 +11,17 @@ function App() {
 
   return (
     <div className="App">
-      
       <Hero />
       <FeaturedListings />
       <Carousel />
       <Locations />
-      {/* <div className="gradient__bg">
-        <Navbar />
-        <Header />
-      </div>
-      <Brand />
-      <WhatGPT3 />
-      <Features />
-      <Possibility />
-      <CTA />
-      <Blog />
-      <Footer /> */}
+      <SellProperty />
+      <Reviews />
+      <Why />
+      <Campolivar />
+      <Services />
+      <RealEstate />
+      <Footer />
     </div>
   )
 }

@@ -1,0 +1,110 @@
+section.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+div.footer_top,
+div.footer_bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.footer_top {
+    background-color: #575f69;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+div.footer_top_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+
+h3.footer_top_main_3_h3 {
+    font-family: var(--font-family-rambla);
+    font-weight: 700;
+    line-height: 20px;
+    font-size: 17px;
+    color: white;
+    text-transform: uppercase;
+    padding-top: 32px;
+}
+
+div.footer_top_main_3_group {
+    padding-bottom: 24px;
+}
+
+p.footer_top_main_3_contact {
+    color: #c4c7ca;
+    text-transform: capitalize;
+    font-family: var(--font-family-rambla);
+    font-weight: 400;
+    line-height: 13px;
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+
+
+div.footer_top_copyright {
+    color: #e6f0e6;
+    font-family: var(--font-family-rambla);
+    font-weight: 700;
+    line-height: 14px;
+    font-size: 12px;
+    margin-top: 32px;
+}
+
+div.footer_top_policies {
+    color: #c4c7ca;
+    font-family: var(--font-family-rambla);
+    font-weight: 400;
+    line-height: 14px;
+    font-size: 12px;
+    margin-top: 32px;
+}
+
+ul.footer_top_policies_ui {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+div.footer_bottom {
+    background-color: #464e56;
+    height: 100px;
+}
+
+.footer_top_main_3_contact_socials {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    gap: 16px;
+    padding-top: 40px;
+}
+
+.social_media_logo {
+    width: 50%; /* Scale SVG image to container width */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;;
+}
+
+.social_media_logo.facebook {
+    width: 30%; /* Scale SVG image to container width */
+}
+
+.svg-container {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    background-color: #c4c7ca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
