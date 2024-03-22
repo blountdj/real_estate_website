@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../../assets/logo.svg'
+import search_icon from '../../assets/icon_search.svg'
 import "./filter.css";
 
 const Filter = () => {
@@ -11,9 +11,9 @@ const Filter = () => {
   return (
     <div className="filter" id="filter">
         <form className="form" onSubmit={handleSubmit}>
-            <div className="container">
-                <label htmlFor="buy_rent">Buy / Rent</label>
-                <select id="buy_rent" name="buy_rent">
+            <div className="container divider">
+                <label className="filter_label" htmlFor="buy_rent">Buy / Rent</label>
+                <select className="no_icon" id="buy_rent" name="buy_rent">
                     <option value="all">All</option>
                     <option value="buy">Buy</option>
                     <option value="rent">Rent</option>
@@ -21,9 +21,9 @@ const Filter = () => {
                 </select>
             </div>
 
-            <div className="container">
-                <label htmlFor="property_type">Property Type</label>
-                <select id="property_type" name="property_type">
+            <div className="container divider">
+                <label className="filter_label" htmlFor="property_type">Property Type</label>
+                <select className="no_icon" id="property_type" name="property_type">
                     <option value="all">All</option>
                     <option value="new_build">New Build</option>
                     <option value="offices">Offices</option>
@@ -33,9 +33,9 @@ const Filter = () => {
                 </select>
             </div>
 
-            <div className="container">
-                <label htmlFor="town">Town</label>
-                <select id="town" name="town">
+            <div className="container divider">
+                <label className="filter_label" htmlFor="town">Town</label>
+                <select className="no_icon" id="town" name="town">
                     <option value="all">All</option>
                     <option value="gandia">Gandia</option>
                     <option value="bonrepos">Bonrepos y Mirambell</option>
@@ -51,9 +51,9 @@ const Filter = () => {
             </div>
 
             <div className="container">
-                <label htmlFor="price">Price:</label>
+                <label className="filter_label" htmlFor="price">Price:</label>
                 <div className="price-dropdowns">
-                    <select id="min-price" name="min-price">
+                    <select className="select_price" id="min-price" name="min-price">
                         <option value="min">Min</option>
                         <option value="100,000">$100,000</option>
                         <option value="200,000">$200,000</option>
@@ -67,7 +67,7 @@ const Filter = () => {
                         <option value="1,000,000">$1,000,000</option>
                     </select>
 
-                    <select id="max-price" name="max-price">
+                    <select className="select_price" id="max-price" name="max-price">
                     <option value="max">Max</option>
                         <option value="100,000">$100,000</option>
                         <option value="200,000">$200,000</option>
@@ -83,7 +83,10 @@ const Filter = () => {
                 </div>
             </div>
 
-            <button type="submit">Search</button>
+            <button className="filter_search button flex-center"type="submit">
+                <img className="search_icon" src={search_icon} alt="search_icon" />
+                <div className="filter_search_text">search</div>
+            </button>
 
         </form>
     </div>

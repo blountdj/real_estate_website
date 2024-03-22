@@ -1,23 +1,59 @@
 .carousel {
     display: flex;
-    flex-direction: row; 
-    
+    flex-direction: row;  
+    width: 100%;
+}
+
+div.carousel-center {
+    display: flex;
+    width: 90%;
+    overflow-x: hidden;
+    gap: 12px;
+    padding-bottom: 20px;
 }
 
 .property {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 400px;
-    background-color: yellow;
+    width: 33%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+    /* box-shadow: var(--box-shadow-01); */
+}
+
+.property::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: var(--box-shadow-01);
+    pointer-events: none; /* Ensure the pseudo-element doesn't interfere with pointer events */
 }
 
 .img_container {
     position: relative;
 }
 
+h3.property_title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-text-heading-grey);
+}
+
+span.property-text {
+    font-family: var(--font-family-rambla);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--color-text-heading-grey);
+}
+
 .property_img {
-    width: 300px;
+    width: 100%;
     height: 300px;
 }
 
@@ -27,3 +63,32 @@
     left: 20px;
 }
 
+div.controller-right,
+div.controller-left {
+    width: 5%;
+}
+
+div.property_container {
+    padding: 16px;
+}
+
+span.space-big {
+    padding-right: 32px;
+}
+
+span.space-little {
+    padding-right: 16px;
+}
+
+img.property_icon {
+    height: 12px;
+    width: 12px;
+    margin-right: 6px;
+}
+
+div.middle_line, 
+div.bottom_line {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+}

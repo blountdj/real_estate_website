@@ -1,5 +1,8 @@
 .reviews {
-    height: 600px;
+    gap: 30px;
+    /* width: 85%; */
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 h2.reviews_h2 {
@@ -7,13 +10,23 @@ h2.reviews_h2 {
 }
 
 p.reviews_p {
-    color: var(--color-text-grey)
+    color: var(--color-text-grey);
+    padding-top: 4px;
 }
 
 div.reviews_carousel {
     display: flex;
     flex-direction: row; 
     gap: 12px;
+    width: 85%;
+    justify-content: space-between;
+}
+
+div.reviews_carousel_items {
+    width: 100%;
+    display: flex;
+    gap: 5%;
+    overflow-x: hidden;
 }
 
 div.reviews_carousel_left,
@@ -27,9 +40,9 @@ div.reviews_carousel_right {
 
 div.reviews_review {
     background-color: var(--color-review-background);
-    width: 200px;
     padding: 24px;
-    width: 200px;
+    width: 30%;
+    flex-shrink: 0;
 }
 
 div.reviews_review_top_row {
@@ -73,4 +86,26 @@ div.reviews_review_review {
     font-weight: 400;
     line-height: 20px;
     font-size: 14px;
+    height: 80px;
+    overflow-y: scroll;
+    padding-right: 16px;
+}
+
+::-webkit-scrollbar {
+    width: 4px; /* Set the width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #88888831; /* Set the background color of the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Set the color of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Set the color of the scrollbar handle on hover */
 }

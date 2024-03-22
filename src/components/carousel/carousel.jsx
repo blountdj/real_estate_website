@@ -1,7 +1,6 @@
 import React from "react";
-import logo from '../../assets/logo.svg'
 import "./carousel.css";
-import { property01, property02, property03, property04, property05, location_icon, size_icon, bed_icon, shower_icon } from './imports';
+import { property01, property02, property03, property04, property05, location_icon, size_icon, bed_icon, shower_icon, tag_icon, controller_left, controller_right } from './imports';
 
 const Carousel = () => {
 
@@ -20,10 +19,10 @@ const Carousel = () => {
                 <span className="property_price">{property?.price}</span>
                 <img className="property_img" src={property.img} alt={property.title} />
             </div>
-            <div className="container">
+            <div className="property_container">
                 <h3 className="property_title">{property.title}</h3>
-                <div className="middle_line"><img className="icon location_icon" src={location_icon} alt="location icon" /><span>{property.location}</span><img className="icon tag_icon" src={location_icon} alt="tag icon" /><span>{property.id}</span></div>
-                <div className="bottom_line"><img className="icon size_icon" src={size_icon} alt="size icon" /><span>{property.description}</span><img className="icon bed_icon" src={bed_icon} alt="bed icon" /><span>{property?.bedrooms}</span><img className="icon shower_icon" src={shower_icon} alt="shower icon" /><span>{property?.bathrooms}</span></div>
+                <div className="middle_line"><img className="property_icon location_icon" src={location_icon} alt="location icon" /><span className="property-text space-big">{property.location}</span><img className="property_icon tag_icon" src={tag_icon} alt="tag icon" /><span className="property-text space-little">{property.id}</span></div>
+                <div className="bottom_line"><img className="property_icon size_icon" src={size_icon} alt="size icon" /><span className="property-text space-little">{property.description}</span><img className="property_icon bed_icon" src={bed_icon} alt="bed icon" /><span className="property-text space-little">{property?.bedrooms}</span><img className="property_icon shower_icon" src={shower_icon} alt="shower icon" /><span className="property-text">{property?.bathrooms}</span></div>
             </div>
         </div>
     ));
@@ -31,12 +30,15 @@ const Carousel = () => {
   return (
     <div className="carousel" id="carousel">
         
-        <div className="controller-left">
-            <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_d_325_5670)"><circle opacity="0.8" cx="31" cy="31" r="21" transform="rotate(-180 31 31)" fill="white"></circle><path d="M34.8184 40.5455L25.2729 31L34.8184 21.4546" stroke="#ED1744"></path></g><defs><filter id="filter0_d_325_5670" x="0" y="0" width="62" height="62" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation="5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_325_5670"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_325_5670" result="shape"></feBlend></filter></defs></svg>
+        <div className="controller-left flex-center">
+         <img className="left_arrow" src={controller_left} alt="left arrow" />
         </div>
-        {propertyElements}
-        <div className="controller-right">
-        <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_d_325_5667)"><circle opacity="0.8" cx="31" cy="31.0001" r="21" fill="white"></circle><path d="M27.1819 21.4546L36.7273 31L27.1819 40.5455" stroke="#ED1744"></path></g><defs><filter id="filter0_d_325_5667" x="0" y="6.10352e-05" width="62" height="62" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation="5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_325_5667"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_325_5667" result="shape"></feBlend></filter></defs></svg>
+        <div className="carousel-center">
+            {propertyElements}
+        </div>
+        <div className="controller-left flex-center">
+        <img className="right_arrow" src={controller_right} alt="right arrow" />
+        
         </div>
     </div>
   )

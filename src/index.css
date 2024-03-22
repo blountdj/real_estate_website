@@ -10,6 +10,12 @@
     --color-text-heading-grey: #565e69;
 
     --color-review-background: #efefef;
+    --test: #cabe18;
+
+    --search-red: #ed1943;
+
+    --box-shadow-01: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
 }
 
 * {
@@ -66,7 +72,19 @@
     border: solid 1px white;
 }  
 
+.button-black-white {
+    color: black;
+    border: solid 1px black;
+}  
+
+.button-white-black {
+    color: white;
+    /* border: solid 1px black; */
+    background-color: black;
+} 
+
 .button-black {
     color: black;
     border: solid 1px black;
 }  
+

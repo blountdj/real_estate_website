@@ -13,7 +13,8 @@ const Reviews = () => {
     {"name": "ignissz", "date": "September 27, 2023", "stars": 5, "review": "Muy satisfecho y Carla muy profesional . Recomendable 100%"},
     {"name": "Raquel Garcia Martinez", "date": "December 19, 2023", "stars": 5, "review": "Dilatada experiencia y excelente equipo humano. Quiero destacar la vocación, el compromiso y el enfoque a la excelencia que mantiene el equipo en todo momento. Recomiendo 100% la agencia y quiero destacar las gestiones realizadas por María Pandurova, que ha sabido liderar esta operación, culminándola con éxito."},
   ]
-
+  const avatarColors = ['#ff5733', '#4997a8', '#5733ff', '##4488d1', '#7e57c2', '#cabe18']; // List of available colors
+  
 
   const reviewItems = reviewsData.map(review => {
 
@@ -26,11 +27,16 @@ const Reviews = () => {
       }
     }
 
+    const randomColor = avatarColors[Math.floor(Math.random() * avatarColors.length)];
+    const avatarStyle = {
+      backgroundColor: randomColor, // Set background color
+    };
+
     return (
     <div className="reviews_review flex-column">
 
       <div className="reviews_review_top_row">
-        <div className="reviews_review_top_row_avatar flex-center">{review.name.slice(0,1)}</div>
+        <div className="reviews_review_top_row_avatar flex-center" style={avatarStyle}>{review.name.slice(0,1)}</div>
         <div>
           <p className="reviews_review_top_row_p name">{review.name}</p>
           <p className="reviews_review_top_row_p date">{review.date}</p>
@@ -51,12 +57,16 @@ const Reviews = () => {
   return (
     <div className="reviews flex-center flex-column" id="reviews">
         <h2 className="reviews_h2">reviews</h2>
-        <p className="reviews_p">Are you thinking of selling, buying, or renting an apartment in Valencia? </p>
-        <p className="reviews_p">Monserrate can be your best ally to cover your needs.</p>
-        <p className="reviews_p">These are the opinions of our customers.</p>
-        <div className="reviews_carousel">
+        <div className="container flex-center">
+          <p className="reviews_p">Are you thinking of selling, buying, or renting an apartment in Valencia? </p>
+          <p className="reviews_p">Monserrate can be your best ally to cover your needs.</p>
+          <p className="reviews_p">These are the opinions of our customers.</p>
+        </div>
+        <div className="reviews_carousel flex-center">
           <div className="reviews_carousel_left flex-center">{"<"}</div>
-          {reviewItems}
+          <div className="reviews_carousel_items">
+            {reviewItems}
+          </div>
           <div className="reviews_carousel_right flex-center">{">"}</div>
         </div>
     </div>

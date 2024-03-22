@@ -10,6 +10,9 @@ import size_icon from '../../assets/size_icon.svg';
 import bed_icon from '../../assets/bed_icon.svg';
 import shower_icon from '../../assets/shower_icon.svg';
 
+import controller_left from '../../assets/controller_left.svg';
+import controller_right from '../../assets/controller_right.svg';
+
 export {
   property01,
   property02,
@@ -20,5 +23,7 @@ export {
   tag_icon,
   size_icon,
   bed_icon,
-  shower_icon
+  shower_icon,
+  controller_left,
+  controller_right
 };

@@ -5,7 +5,7 @@ import "./footer_links.css";
 const FooterLinks = ({ title, links }) => {
 
   const linksMapped = links.map(link => (
-    <li className="footer_links_li"><a className="footer_links_li_a" href={link.href}>{link.text}</a></li>
+    <li key={link.text} className="footer_links_li"><a className="footer_links_li_a" href={link.href}>{link.text}</a></li>
   ))
 
   return (

@@ -61,16 +61,16 @@ const Footer = () => {
               </div>
               <p className="footer_top_main_3_contact">contacto@monserrateinmobiliaria.com</p>
               <div className="footer_top_main_3_contact_socials">
-                <div class="svg-container">
+                <div className="svg-container">
                   <img href="#" className="social_media_logo facebook" src={facebook} alt="facebook logo" />
                 </div>
-                <div class="svg-container">
+                <div className="svg-container">
                   <img href="#" className="social_media_logo" src={linkedin} alt="linkedin logo" />
                 </div>
-                <div class="svg-container">
+                <div className="svg-container">
                   <img href="#" className="social_media_logo" src={instagram} alt="instagram logo" />
                 </div>
-                <div class="svg-container">
+                <div className="svg-container">
                   <img href="#" className="social_media_logo" src={youtube} alt="youtube logo" />
                 </div>
               </div>
