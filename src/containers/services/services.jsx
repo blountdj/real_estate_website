@@ -9,12 +9,12 @@ import {
   service_long_term_rental,
   service_international_client,
   service_real_estate } from './imports';
-import "./services.css";
+import "./services.scss";
 
 
 const Services = () => {
   return (
-    <div className="services flex-center flex-column" id="services">
+    <section className="services flex-center flex-column" id="services">
         <h2 className="services_h2">monserrate's services</h2>
         <ServiceBlock title="real estate" side="l" button="false" image={service_real_estate} alt="real estate image"/>
         <ServiceBlock title="international client" side="r" button="true"  image={service_international_client} alt="international client image"/>
@@ -24,7 +24,7 @@ const Services = () => {
         <ServiceBlock title="new construction or complete reform" side="r" button="false"  image={service_construction} alt="construction image"/>
         <ServiceBlock title="home staging" side="l" button="true"  image={service_staging} alt="staging image"/>
         <ServiceBlock title="welcome plan" side="r" button="false"  image={service_welcome} alt="welcome image"/>
-    </div>
+    </section>
   )
 };
 

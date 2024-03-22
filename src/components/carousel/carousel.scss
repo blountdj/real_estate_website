@@ -1,0 +1,84 @@
+@import "../../variables";
+@import "../../mixins";
+
+.carousel {
+    display: flex;
+    flex-direction: row;  
+    width: 100%;
+
+    &-center {
+        display: flex;
+        width: 90%;
+        overflow-x: hidden;
+        gap: 12px;
+        padding-bottom: 20px;
+    }
+}
+
+.property {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+
+    &::after {
+        @include overlay($box-shadow-01);
+        pointer-events: none; /* Ensure the pseudo-element doesn't interfere with pointer events */
+    }
+
+    &_title {
+        @include font($font-family-asul, 700, 16px, 19px, left, $color-text-heading-grey)
+    }
+
+    &-text {
+        @include font($font-family-rambla, 400, 14px, 14px, left, $color-text-heading-grey)
+
+    }
+
+    &_img {
+        width: 100%;
+        height: 300px;
+    }
+
+    &_price {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        @include font($font-family-rambla, 400, 20px, 44px, left, white)
+    }
+}
+
+.img_container {
+    position: relative;
+}
+
+div.controller {
+    width: 5%;
+}
+
+div.property_container {
+    padding: 16px;
+}
+
+span.space-big {
+    padding-right: 32px;
+}
+
+span.space-little {
+    padding-right: 16px;
+}
+
+img.property_icon {
+    height: 12px;
+    width: 12px;
+    margin-right: 6px;
+}
+
+div.middle_line, 
+div.bottom_line {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+}

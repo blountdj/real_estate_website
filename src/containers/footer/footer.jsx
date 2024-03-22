@@ -1,10 +1,10 @@
 import React from "react";
-import "./footer.css";
-import logo from '../../assets/logo_grey.svg'
-import facebook from '../../assets/social_media_facebook.svg'
-import instagram from '../../assets/social_media_instagram.svg'
-import linkedin from '../../assets/social_media_linkedin.svg'
-import youtube from '../../assets/social_media_youtube.svg'
+import "./footer.scss";
+import logo from '../../assets/logos/logo_grey.svg'
+import facebook from '../../assets/social_media/social_media_facebook.svg'
+import instagram from '../../assets/social_media/social_media_instagram.svg'
+import linkedin from '../../assets/social_media/social_media_linkedin.svg'
+import youtube from '../../assets/social_media/social_media_youtube.svg'
 import FooterLinks from "../../components/footer_links/footer_links";
 
 const Footer = () => {
@@ -37,7 +37,7 @@ const Footer = () => {
 
   return (
     <section className="footer" id="footer">
-        <div className="footer_top">
+        <div className="footer_top flex-center flex-center-column">
           <div className="footer_top_main">
             <div className="footer_top_main_1">
               <FooterLinks title="company" links={company_links}/>
@@ -61,16 +61,16 @@ const Footer = () => {
               </div>
               <p className="footer_top_main_3_contact">contacto@monserrateinmobiliaria.com</p>
               <div className="footer_top_main_3_contact_socials">
-                <div className="svg-container">
+                <div className="svg-container flex-center">
                   <img href="#" className="social_media_logo facebook" src={facebook} alt="facebook logo" />
                 </div>
-                <div className="svg-container">
+                <div className="svg-container flex-center">
                   <img href="#" className="social_media_logo" src={linkedin} alt="linkedin logo" />
                 </div>
-                <div className="svg-container">
+                <div className="svg-container flex-center">
                   <img href="#" className="social_media_logo" src={instagram} alt="instagram logo" />
                 </div>
-                <div className="svg-container">
+                <div className="svg-container flex-center">
                   <img href="#" className="social_media_logo" src={youtube} alt="youtube logo" />
                 </div>
               </div>
@@ -85,7 +85,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="footer_bottom">
+        <div className="footer_bottom flex-center flex-center-column">
           <img className="logo" src={logo} alt="logo" />
         </div>
     </section>

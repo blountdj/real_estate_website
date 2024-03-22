@@ -1,17 +1,17 @@
-import property01 from '../../assets/estate-orange-farm-castellon.jpg';
-import property02 from '../../assets/Exterior-2.jpg';
-import property03 from '../../assets/Guillem-de-Castro.jpg';
-import property04 from '../../assets/Salon-3.jpg';
-import property05 from '../../assets/El-Plantio-81.jpg';
+import property01 from '../../assets/properties/estate-orange-farm-castellon.jpg';
+import property02 from '../../assets/properties/Exterior-2.jpg';
+import property03 from '../../assets/properties/Guillem-de-Castro.jpg';
+import property04 from '../../assets/properties/Salon-3.jpg';
+import property05 from '../../assets/properties/El-Plantio-81.jpg';
 
-import location_icon from '../../assets/location_icon.svg';
-import tag_icon from '../../assets/tag_icon.svg';
-import size_icon from '../../assets/size_icon.svg';
-import bed_icon from '../../assets/bed_icon.svg';
-import shower_icon from '../../assets/shower_icon.svg';
+import location_icon from '../../assets/icons/location.svg';
+import tag_icon from '../../assets/icons/tag.svg';
+import size_icon from '../../assets/icons/size.svg';
+import bed_icon from '../../assets/icons/bed.svg';
+import shower_icon from '../../assets/icons/shower.svg';
 
-import controller_left from '../../assets/controller_left.svg';
-import controller_right from '../../assets/controller_right.svg';
+import controller_left from '../../assets/icons/controller_left.svg';
+import controller_right from '../../assets/icons/controller_right.svg';
 
 export {
   property01,

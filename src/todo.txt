@@ -1,0 +1,10 @@
+- sticky contact button
+- add hovers etc
+- create components
+- create carousels
+- create animations
+- make responsive
+- create other pages
+- fix filter styling
+- niches:
+- retail estate / plumbers / builders / electricians / driving instructors / hairdressors / ecommerce site / farm / window fitter / look for gumtree for different categories

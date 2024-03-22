@@ -1,6 +1,9 @@
+@import "../../variables";
+@import "../../mixins";
+
 .navbar {
     display: flex;
-    font-family: var(--font-family-rambla);
+    font-family: $font-family-rambla;
     justify-content: space-between;
     width: 100%;
     z-index: 10;

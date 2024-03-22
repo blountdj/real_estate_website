@@ -1,6 +1,6 @@
 import React from "react";
-import search_icon from '../../assets/icon_search.svg'
-import "./filter.css";
+import search_icon from '../../assets/icons/search.svg'
+import "./filter.scss";
 
 const Filter = () => {
 
@@ -13,7 +13,7 @@ const Filter = () => {
         <form className="form" onSubmit={handleSubmit}>
             <div className="container divider">
                 <label className="filter_label" htmlFor="buy_rent">Buy / Rent</label>
-                <select className="no_icon" id="buy_rent" name="buy_rent">
+                <select className="filter_select no_icon" id="buy_rent" name="buy_rent">
                     <option value="all">All</option>
                     <option value="buy">Buy</option>
                     <option value="rent">Rent</option>
@@ -23,19 +23,21 @@ const Filter = () => {
 
             <div className="container divider">
                 <label className="filter_label" htmlFor="property_type">Property Type</label>
-                <select className="no_icon" id="property_type" name="property_type">
-                    <option value="all">All</option>
-                    <option value="new_build">New Build</option>
-                    <option value="offices">Offices</option>
-                    <option value="residential">Residential</option>
-                    <option value="retail">Retail</option>
-                    <option value="plot">Plot</option>
-                </select>
+                <div className="select-category-container">
+                    <select className="filter_select no_icon" id="property_type" name="property_type">
+                        <option value="all">All</option>
+                        <option value="new_build">New Build</option>
+                        <option value="offices">Offices</option>
+                        <option value="residential">Residential</option>
+                        <option value="retail">Retail</option>
+                        <option value="plot">Plot</option>
+                    </select>
+                </div>
             </div>
 
             <div className="container divider">
                 <label className="filter_label" htmlFor="town">Town</label>
-                <select className="no_icon" id="town" name="town">
+                <select className="filter_select no_icon" id="town" name="town">
                     <option value="all">All</option>
                     <option value="gandia">Gandia</option>
                     <option value="bonrepos">Bonrepos y Mirambell</option>
@@ -52,8 +54,8 @@ const Filter = () => {
 
             <div className="container">
                 <label className="filter_label" htmlFor="price">Price:</label>
-                <div className="price-dropdowns">
-                    <select className="select_price" id="min-price" name="min-price">
+                <div className="price-dropdowns flex-center">
+                    <select className="filter_select select_price" id="min-price" name="min-price">
                         <option value="min">Min</option>
                         <option value="100,000">$100,000</option>
                         <option value="200,000">$200,000</option>
@@ -67,7 +69,7 @@ const Filter = () => {
                         <option value="1,000,000">$1,000,000</option>
                     </select>
 
-                    <select className="select_price" id="max-price" name="max-price">
+                    <select className="filter_select select_price" id="max-price" name="max-price">
                     <option value="max">Max</option>
                         <option value="100,000">$100,000</option>
                         <option value="200,000">$200,000</option>

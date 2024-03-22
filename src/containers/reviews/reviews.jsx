@@ -1,7 +1,7 @@
 import React from "react";
-import star_yellow from '../../assets/star_yellow.svg';
-import star_grey from '../../assets/star_grey.svg';
-import "./reviews.css";
+import star_yellow from '../../assets/icons/star_yellow.svg';
+import star_grey from '../../assets/icons/star_grey.svg';
+import "./reviews.scss";
 
 
 const Reviews = () => {
@@ -55,7 +55,7 @@ const Reviews = () => {
   )})
 
   return (
-    <div className="reviews flex-center flex-column" id="reviews">
+    <section className="reviews flex-center flex-column" id="reviews">
         <h2 className="reviews_h2">reviews</h2>
         <div className="container flex-center">
           <p className="reviews_p">Are you thinking of selling, buying, or renting an apartment in Valencia? </p>
@@ -63,13 +63,13 @@ const Reviews = () => {
           <p className="reviews_p">These are the opinions of our customers.</p>
         </div>
         <div className="reviews_carousel flex-center">
-          <div className="reviews_carousel_left flex-center">{"<"}</div>
+          <div className="reviews_carousel_arrow flex-center">{"<"}</div>
           <div className="reviews_carousel_items">
             {reviewItems}
           </div>
-          <div className="reviews_carousel_right flex-center">{">"}</div>
+          <div className="reviews_carousel_arrow flex-center">{">"}</div>
         </div>
-    </div>
+    </section>
   )
 };
 

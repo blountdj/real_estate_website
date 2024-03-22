@@ -1,0 +1,94 @@
+@import "../../variables";
+@import "../../mixins";
+
+.reviews {
+    gap: 30px;
+    /* width: 85%; */
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &_h2 {
+        @include font($font-family-asul, 700, 21px, 25px, left, $color-text-heading-grey);
+        text-transform: uppercase;
+    }
+
+    &_p {
+        @include font($font-family-rambla, 400, 22px, 27px, left, $color-text-grey);
+        padding-top: 4px;
+    }
+
+    &_carousel {
+        display: flex;
+        flex-direction: row; 
+        gap: 12px;
+        width: 85%;
+        justify-content: space-between;
+
+        &_items {
+            width: 100%;
+            display: flex;
+            gap: 5%;
+            overflow-x: hidden;
+        }
+
+        &_arrow {
+            @include font($font-family-rambla, 200, 40px, 22px, left, $color-text-grey);
+        }
+    }
+
+    &_review {
+        background-color: $color-review-background;
+        padding: 24px;
+        width: 30%;
+        flex-shrink: 0;
+
+        &_top_row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            &_avatar {
+                background-color: aqua;
+                border-radius: 50%;
+                text-transform: uppercase;
+                width: 50px;
+                height: 50px;
+                margin: 10px;
+                margin-left: 0px;
+                @include font($font-family-rambla, 400, 24px, 20px, left, white);
+            }
+
+            &_p.name {
+                @include font($font-family-rambla, 700, 15px, 21px, left, black);
+            }
+
+            &_p.date {
+                color: $color-text-grey;
+                @include font($font-family-rambla, 400, 12px, 17px, left, $color-text-grey);
+            }
+        }
+
+        &_review {
+            @include font($font-family-rambla, 400, 14px, 20px, left, $black);
+            height: 80px;
+            overflow-y: scroll;
+            padding-right: 16px;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 4px; /* Set the width of the scrollbar */
+
+    &-track {
+        background: #88888831; /* Set the background color of the scrollbar track */
+    }
+
+    &-thumb {
+        background: #888; /* Set the color of the scrollbar handle */
+
+        &:hover {
+            background: #555; /* Set the color of the scrollbar handle on hover */
+        }
+    }
+}

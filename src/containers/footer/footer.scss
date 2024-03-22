@@ -1,0 +1,81 @@
+@import "../../variables";
+@import "../../mixins";
+
+.footer {
+    &_top {
+        background-color: #575f69;
+        height: auto;
+        padding-top: 40px;
+        padding-bottom: 60px;
+
+        &_main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 70%;
+
+            &_3_h3 {
+                @include font($font-family-rambla, 700, 17px, 20px, left, white);
+                text-transform: uppercase;
+                padding-top: 32px;
+            }
+
+            &_3_group {
+                padding-bottom: 24px;
+            }
+
+            &_3_contact {
+                @include font($font-family-rambla, 400, 15px, 13px, left, #c4c7ca);
+                text-transform: capitalize;
+                padding-top: 10px;
+            }
+
+            &_3_contact_socials {
+                display: flex;
+                flex-direction: row;
+                /* justify-content: space-between; */
+                gap: 16px;
+                padding-top: 40px;
+            }
+        }
+
+        &_copyright {
+            @include font($font-family-rambla, 700, 12px, 14px, left, #e6f0e6);
+            margin-top: 32px;
+        }
+
+        &_policies {
+            @include font($font-family-rambla, 400, 14px, 12px, left, #c4c7ca);
+            margin-top: 32px;
+
+            &_ui {
+                display: flex;
+                flex-direction: row;
+                gap: 32px;
+            }
+        }
+    }
+
+    &_bottom {
+        background-color: #464e56;
+        height: 100px;
+    }
+}
+
+.social_media_logo {
+    width: 50%; /* Scale SVG image to container width */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+
+    &.facebook {
+        width: 30%; /* Scale SVG image to container width */
+    }
+}
+
+.svg-container {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    background-color: #c4c7ca;
+}

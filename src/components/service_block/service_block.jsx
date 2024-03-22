@@ -1,5 +1,5 @@
 import React from "react";
-import "./service_block.css";
+import "./service_block.scss";
 
 
 const ServiceBlock = ({ title, side, button, image, image_alt }) => {

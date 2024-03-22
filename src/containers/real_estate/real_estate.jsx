@@ -1,5 +1,5 @@
 import React from "react";
-import "./real_estate.css";
+import "./real_estate.scss";
 
 
 const RealEstate = () => {

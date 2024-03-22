@@ -1,5 +1,5 @@
 import React from "react";
-import "./locations.css";
+import "./locations.scss";
 import {   
   los_monasterios,
   alfinach,
@@ -22,27 +22,27 @@ const Locations = () => {
 
   const locationsElements = locations.map(location => (
       <div key={location.title} className="locations_img_container">
-          <img className="location_img" src={location.img} alt={location.title} />
-          <h3 className="location_img_text">{location.title}</h3>
+          <img className="locations_img" src={location.img} alt={location.title} />
+          <h3 className="locations_img_text">{location.title}</h3>
     </div>
 ));
 
   return (
-    <div className="locations flex-center flex-column" id="locations">
+    <section className="locations flex-center flex-center-column" id="locations">
         <h2 className="locations_h2">locations</h2>
         <p className="locations_p">Exclusive properties in the best areas of Valencia and surroundings. We find the right place for you in the best locations.</p>
         <div className="locations_imgs_row flex-center">
-          <div className="locations_controller-left">
+          <div className="locations_controllers">
           <img className="left_arrow" src={controller_left} alt="left arrow" />
           </div>
-          <div className="location_elements ">
+          <div className="locations_elements ">
             {locationsElements}
             </div>
-          <div className="locations_controller-right">
+          <div className="locations_controllers">
           <img className="right_arrow" src={controller_right} alt="right arrow" />
           </div>
         </div>
-    </div>
+    </section>
   )
 };
 

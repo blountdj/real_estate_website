@@ -1,5 +1,5 @@
 import React from "react";
-import "./footer_links.css";
+import "./footer_links.scss";
 
 
 const FooterLinks = ({ title, links }) => {

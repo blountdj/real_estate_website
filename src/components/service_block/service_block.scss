@@ -1,0 +1,76 @@
+@import "../../variables";
+
+.serviceBlock {
+    display: flex;
+    width: 80%;
+    overflow: hidden;
+    height: 275px;
+    margin-bottom: 16px;
+
+    &_text {
+        display: flex;
+        justify-content: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        gap: 16px;
+        width: 50%;
+
+        &.l {
+            background-color: #585f68;
+        }
+
+        &_h3 {
+            text-transform: uppercase;
+            padding-left: 30px;
+
+            &.l {
+                color: white;
+            }
+
+            &.r {
+                color: #333;
+            }
+        }
+                
+        &_p {
+            color: #999;
+        }
+
+
+        &_holder {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                width: 20px;
+                height: 1px;
+                background-color: $search-red;
+            }
+        }
+    }
+
+    &_image {
+        width: 50%;
+
+        &_image {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &.l {
+        flex-direction: row;
+        // color: green;
+    }
+
+    &.r {
+        flex-direction: row-reverse;
+    }
+
+}
+
