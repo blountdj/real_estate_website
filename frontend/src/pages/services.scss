@@ -1,0 +1,37 @@
+@import "../variables";
+@import "../mixins";
+
+.background_header.services {
+    @include backgroundImagePage('services-header.jpg');
+    height: 500px;
+}
+
+.services_info {
+    @include flex(column, center, center, 44px);
+    background-color: $color-background-medium-grey;
+    color: white;
+    width: 100%;
+    padding: 80px;
+
+    &_h2 {
+        text-transform: uppercase;
+        @include font($font-family-asul, 700, 21px, 25px, center, white);
+        width: 300px;
+    }
+
+    &_p {
+        @include font($font-family-rambla, 400, 16px, 19px, center, white);
+        text-align: center;
+        width: 700px;
+    }
+
+    &_button {
+        @include font($font-family-rambla, 400, 15px, 18px, center, white);
+        text-align: center;
+        padding: 16px 32px;
+        background-color: transparent;
+        border: 1px solid white;
+        text-transform: uppercase;
+        border-radius: 2px;
+    }
+}

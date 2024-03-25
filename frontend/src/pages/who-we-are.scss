@@ -1,0 +1,54 @@
+@import "../variables";
+@import "../mixins";
+
+.background_header.who-we-are {
+    @include backgroundImagePage('who-we-are.jpg');
+    height: 400px;
+}
+
+.buildings_img_section {
+    @include backgroundImageFullUrl("../assets/pages/who_we_are/buildings.jpg");
+    height: 600px;
+    position: relative;
+    &_overlay {
+        @include overlay(#55689256); 
+    }
+}
+
+.whoWeAre {
+    @include flex(column, center, center, 20px);
+    width: 100%;
+
+    &_text {
+        @include flex(column, center, center, 20px);
+        padding: 60px;
+        padding-bottom: 20px;
+        width: 100%;
+
+
+        &_container {
+            @include flex(column, center, center, 20px);
+            width: 50%;
+        }
+
+        &_p {
+            @include font($font-family-rambla, 400, 16px, 19px, left, $color-text-heading-grey)
+        }
+
+        &_h2 {
+            @include font($font-family-asul, 700, 21px, 25px, center, $color-text-heading-grey);
+            padding-top:60px;
+        }
+    }
+
+    &_consultants {
+        margin-bottom: 80px;
+        &_container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns, each taking up 1 fraction unit */
+            grid-gap: 10px; /* Optional gap between grid items */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+    }
+}

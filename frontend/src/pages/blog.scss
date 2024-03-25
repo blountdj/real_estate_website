@@ -1,0 +1,7 @@
+@import "../variables";
+@import "../mixins";
+
+.background_header.blog {
+    @include backgroundImagePage('blog.jpg');
+    height: 700px;
+}

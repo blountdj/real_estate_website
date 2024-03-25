@@ -1,0 +1,70 @@
+@import "../../variables";
+@import "../../mixins";
+
+
+.contact-form {
+    @include flex(column, center, center, 28px);
+    background-color: $color-background-grey;
+    padding: 60px;
+    gap: 80px;
+    width: 100%;
+
+    &-container {
+        @include flex(column, center, center, 40px);
+        width: 60%;
+    }
+
+    &-h2{
+        @include font($font-family-asul, 700, 21px, 25px, center, #626973);
+        text-transform: uppercase;
+    }
+
+    &-form {
+        @include flex(column, flex-start, center, 16px);
+        width: 100%;
+
+        &-container {
+            @include flex(row, center, center, 16px);
+            width: 100%;
+        }
+
+        &-input {
+            width: 100%;
+            border: none;
+            padding: 12px;
+            color: $color-text-grey;
+
+            &:focus {
+                outline: none;
+            }
+
+            &.message {
+                height: 160px;
+            }
+        }
+
+        &-privacy {
+            @include flex(row, flex-start, center, 8px);
+        
+            &-label {
+                @include font($font-family-rambla, 400, 16px, 19px, left, #565e69);
+            }
+            
+            &-span {
+                @include font($font-family-rambla, 700, 16px, 19px, left, #565e69);
+            }
+        }
+        
+
+        &-button {
+            @include flex(column, center, center, 0px);
+            background-color: $color-background-medium-grey;
+            border: 1px solid black;
+            text-transform: uppercase;
+            @include font($font-family-rambla, 600, 16px, 16px, center, white);
+            width: 100%;
+        }
+    
+    }
+
+}

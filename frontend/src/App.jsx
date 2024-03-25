@@ -9,7 +9,7 @@ import {
 //   Hero, FeaturedListings, Locations, SellProperty, Reviews, Why, Campolivar, Services, RealEstate
 // } from "./containers";
 
-import { Home, Properties, Services, WhoAreWe, Expertise, Locations, Blog, Contact } from './pages'
+import { Home, Properties, ServicesPage, WhoAreWe, Expertise, Locations, Blog, Contact, Privacy } from './pages'
 
 
 function App() {
@@ -19,36 +19,40 @@ function App() {
       <Router>
         <Routes>
           
-          <Route path="/" element={<Layout>
+          <Route path="/" element={<Layout logoProp="white-grey">
             <Home />
           </Layout>}/>
 
-          <Route path="/properties" element={<Layout>
+          <Route path="/properties" element={<Layout logoProp="grey">
             <Properties />
           </Layout>}/>
 
-          <Route path="/services" element={<Layout>
-            <Services />
+          <Route path="/services" element={<Layout logoProp="grey">
+            <ServicesPage />
           </Layout>}/>
 
-          <Route path="/who_are_We" element={<Layout>
+          <Route path="/who_are_We" element={<Layout logoProp="grey">
             <WhoAreWe />
           </Layout>}/>
 
-          <Route path="/expertise" element={<Layout>
+          <Route path="/expertise" element={<Layout logoProp="grey">
             <Expertise />
           </Layout>}/>
 
-          <Route path="/locations" element={<Layout>
+          <Route path="/locations" element={<Layout logoProp="grey">
             <Locations />
           </Layout>}/>
 
-          <Route path="/blog" element={<Layout>
+          <Route path="/blog" element={<Layout logoProp="grey">
             <Blog />
           </Layout>}/>
 
-          <Route path="/contact" element={<Layout>
+          <Route path="/contact" element={<Layout logoProp="grey">
             <Contact />
+          </Layout>}/>
+
+          <Route path="/privacy_policy" element={<Layout logoProp="grey">
+            <Privacy />
           </Layout>}/>
 
         </Routes>

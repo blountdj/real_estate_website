@@ -1,0 +1,77 @@
+@import "../variables";
+@import "../mixins";
+
+.background_header.locations {
+    @include backgroundImagePage('locations.jpg');
+    height: 500px;
+}
+
+.locations_page_properties {
+    background-color: $color-background-medium-grey;
+    height: 250px;
+    @include flex(column, center, center, 0px);
+
+    &_button {
+        text-transform: uppercase;
+        background-color: transparent;
+        padding: 12px 24px;
+        border: solid 1px $color-text-grey;
+        @include font($font-family-rambla, 400, 15px, 18px, center, $color-text-grey)
+    }
+}
+
+.locations_serviceBlock {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    height: 600px;
+    // margin-bottom: 16px;
+
+    &_text {
+        display: flex;
+        justify-content: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        gap: 16px;
+        width: 40%;
+
+        &_h3 {
+            text-transform: uppercase;
+            @include font($font-family-rambla, 700, 28px, 33px, left, $color-text-heading-grey);
+
+        }
+                
+        &_p {
+            @include font($font-family-rambla, 400, 19px, 23px, left, $color-text-heading-grey);
+            width: 75%;
+        }
+    }
+
+    &_image {
+        width: 60%;
+
+        &_image {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &.l {
+        flex-direction: row;
+        // color: green;
+    }
+
+    &.r {
+        flex-direction: row-reverse;
+    }
+
+    &_button {
+        width: fit-content;
+        text-transform: uppercase;
+        background-color: transparent;
+        padding: 12px 24px;
+        border: solid 1px $color-text-grey;
+        @include font($font-family-rambla, 400, 15px, 18px, center, $color-text-grey)
+    }
+}

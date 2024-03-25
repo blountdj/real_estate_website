@@ -1,0 +1,19 @@
+@import "../../variables";
+@import "../../mixins";
+
+
+.consultant {
+    @include flex(column, center, center, 12px);
+
+    &_img {
+        height: 350px;
+    }
+
+    &_name {
+        @include font($font-family-asul, 700, 16px, 19px, center, $color-text-heading-grey);
+    }
+
+    &_title {
+        @include font($font-family-rambla, 400, 15px, 18px, center, $color-text-heading-grey);
+    }
+}

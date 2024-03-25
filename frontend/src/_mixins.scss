@@ -4,6 +4,24 @@
     background-position: center; 
 }
 
+@mixin backgroundImageComponent($img) {
+    background-image: url('../../assets/background_images/' + $img);
+    background-size: cover; /* This property ensures that the background image covers the entire element */
+    background-position: center; 
+}
+
+@mixin backgroundImagePage($img) {
+    background-image: url('../src/assets/background_images/' + $img);
+    background-size: cover; /* This property ensures that the background image covers the entire element */
+    background-position: center; 
+}
+
+@mixin backgroundImageFullUrl($img) {
+    background-image: url($img);
+    background-size: cover; /* This property ensures that the background image covers the entire element */
+    background-position: center; 
+}
+
 @mixin overlay($gradient) {
     content: "";
     position: absolute;
@@ -24,7 +42,7 @@
 
 @mixin font($family, $weight, $font-size, $line-height, $alignment, $color) {
     font-family: $family;
-    text-align: left;
+    text-align: $alignment;
     font-weight: $weight;
     font-size: $font-size;
     line-height: $line-height;

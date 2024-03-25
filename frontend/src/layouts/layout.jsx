@@ -1,10 +1,11 @@
 import Footer from "../components/footer/footer";
 import Navbar from "../components/navbar/navbar"
 
-const Layout = ({children}) => {
+const Layout = ({logoProp, children}) => {
+
     return (
         <div>
-            <Navbar />
+            <Navbar logo={logoProp} />
             {children}
             <Footer />
         </div>
