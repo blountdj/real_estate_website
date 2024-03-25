@@ -1,0 +1,21 @@
+@import "../../variables";
+@import "../../mixins";
+
+.whyBlock {
+    @include flex(row, center, space-between, 0px);
+    // display: flex;
+    // flex-direction: row;
+    width: 600px;
+
+    &_text {
+        @include flex(row, center, center, 24px);
+        width: 100%;
+        color: $color-text-heading-grey;
+        padding-left: 24px;
+
+        &_h3 {
+            text-transform: uppercase;
+        }
+    }
+}
+

@@ -1,0 +1,23 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+.realEstate {
+    @include backgroundImage('real_estate_bg.png');
+    height: 500px;
+    color: white;
+    position: relative;
+    
+    &::after {
+        @include overlay($linear-gradient-to-right-02-01);
+        z-index: 1; 
+    }
+
+    &_container {
+        @include flex(column, flex-start, center, 24px);
+        margin-left: 160px;
+        height: 100%;
+        width: 400px;
+        z-index: 5;
+        position: relative;
+    }
+}

@@ -1,0 +1,27 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+.campolivar {
+    @include backgroundImage('campolivar.jpg');
+    @include flex(row, center, space-between, 0px);
+    height: 400px;
+    position: relative;
+    color: white;
+
+    &_overlay {
+        z-index: 0;
+        background: $linear-gradient-to-bottom-05-02;
+    }
+
+    &_container {
+        z-index: 1;
+        position: relative;
+        padding-left: 150px;
+        gap: 24px;
+        display: flex;
+    }
+
+    &_p {
+        width: 60%;
+    }
+}

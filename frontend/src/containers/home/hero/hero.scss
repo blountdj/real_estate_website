@@ -1,0 +1,41 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+.hero_section {
+    @include backgroundImage('hero_img.jpeg');
+    height: 800px;
+    position: relative;
+    @include flex(column, flex-start, center, 0);
+    color: white;
+
+    &_text {
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        position: relative;
+
+        &_text {
+            height: 100%;
+            width: 100%;
+            z-index: 2;
+            position: relative;
+        }
+        &_h1 {
+            font-size: 60px;
+            z-index: 2;
+            color: white;
+        }
+        &_p {
+            font-size: 24px;
+            text-align: center;
+            width: 800px;
+        }
+    }
+}
+
+.bg_container::before {
+    @include overlay($linear-gradient-to-bottom-05-02); 
+}
+.bg_container::after {
+    @include overlay(#59595934); 
+}

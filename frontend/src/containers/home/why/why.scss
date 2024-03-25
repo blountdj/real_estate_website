@@ -1,0 +1,26 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+div.why {
+    /* height: 1000px; */
+    display: flex;
+    gap: 70px;
+    padding-top: 60px;
+    padding-bottom: 80px;
+
+    &_components {
+        flex-wrap: wrap;
+        width: 90%;
+        gap: 40px;
+    }
+
+    &_h2 {
+        @include font($font-family-asul, 700, 21px, 25px, left, black);
+    }
+
+    &_p {
+        @include font($font-family-rambla, 400, 22px, 27px, center, black);
+        width: 60%;
+    }
+}
+
