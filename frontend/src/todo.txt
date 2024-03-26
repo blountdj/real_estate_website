@@ -8,5 +8,6 @@
 - fix filter styling
 - privacy policy
 - page not found
+- whatsapp integration
 - niches:
 - retail estate / plumbers / builders / electricians / driving instructors / hairdressors / ecommerce site / farm / window fitter / look for gumtree for different categories

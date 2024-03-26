@@ -1,0 +1,45 @@
+@import "../../variables";
+@import "../../mixins";
+
+.properties_list {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns each taking up equal space */
+    grid-gap: 20px; 
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+.property_list {
+    
+    &_property {
+    background-color: white; 
+    box-shadow: $box-shadow-01;
+    width: 100%;
+    }
+
+    &_img_container {
+        height: 300px;
+
+        &::after {
+            @include overlay($box-shadow-01);
+            pointer-events: none; /* Ensure the pseudo-element doesn't interfere with pointer events */
+        }
+    }
+
+    &_property_container {
+        @include flex(column, flex-start, flex-start, 0px);
+        padding: 16px;
+        z-index: 11;
+        background-color: white;
+        height: 120px;
+    }
+}
+
+h3.property_title,
+div.middle_line {
+    text-transform: capitalize;
+}
+

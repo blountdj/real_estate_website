@@ -1,48 +1,29 @@
 @import "../../variables";
 @import "../../mixins";
 
+
+
 .filter {
-    background-color: white;
-    /* height: 150px; */
-    width: 80%;
-    @include flex(row, flex-start, flex-start, 0px);
-    position: absolute;
-    bottom: -75px;
-    left: 10%;
-    z-index: 4;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 12px;
-    padding-bottom: 20px;
-    box-shadow: $box-shadow-01;
+    &_form {
+        @include flex(row, center, flex-start, 12px);
+        position: relative;
 
-    &_label {
-        padding-bottom: 16px;
-    }
+        &_container {
+            @include flex(column, flex-start, flex-start, 0px);
 
-    &_search_text {
-        padding: 16px;
+            &_label {
+                @include font($font-family-rambla, 800, 14px, 14px, left, #565e69);
+            }
+
+            &_select {
+                @include font($font-family-rambla, 400, 18px, 18px, left, #999);
+                width: 150px;
+                border: none;
+            }
+        }
     }
 }
 
-.form {
-    @include flex(row, center, flex-start, 12px);
-    position: relative;
-}
-
-.container {
-    @include flex(column, flex-start, flex-start, 0px);
-}
-
-label {
-    @include font($font-family-rambla, 800, 14px, 14px, left, #565e69);
-}
-
-select {
-    @include font($font-family-rambla, 400, 18px, 18px, left, #999);
-    width: 150px;
-    border: none;
-}
 
 button.filter_search {
     background-color: $search-red;

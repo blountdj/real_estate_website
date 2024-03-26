@@ -9,7 +9,7 @@ import {
 //   Hero, FeaturedListings, Locations, SellProperty, Reviews, Why, Campolivar, Services, RealEstate
 // } from "./containers";
 
-import { Home, Properties, ServicesPage, WhoAreWe, Expertise, Locations, Blog, Contact, Privacy } from './pages'
+import { Home, Properties, ServicesPage, WhoAreWe, Expertise, Locations, Blog, Contact, Privacy, PropertyDetails } from './pages'
 
 
 function App() {
@@ -25,6 +25,10 @@ function App() {
 
           <Route path="/properties" element={<Layout logoProp="grey">
             <Properties />
+          </Layout>}/>
+
+          <Route path="/properties/:propertyId" element={<Layout logoProp="grey">
+            <PropertyDetails />
           </Layout>}/>
 
           <Route path="/services" element={<Layout logoProp="grey">

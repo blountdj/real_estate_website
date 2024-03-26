@@ -2,18 +2,18 @@ import React from "react";
 import search_icon from '../../assets/icons/search.svg'
 import "./filter.scss";
 
-const Filter = () => {
+const Filter = ({ page, more_filters }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
     }
 
   return (
-    <div className="filter" id="filter">
-        <form className="form" onSubmit={handleSubmit}>
-            <div className="container divider">
-                <label className="filter_label" htmlFor="buy_rent">Buy / Rent</label>
-                <select className="filter_select no_icon" id="buy_rent" name="buy_rent">
+    <div className={`${page}_filter`} id={`${page}_filter`}>
+        <form className="filter_form" onSubmit={handleSubmit}>
+            <div className="filter_form_container divider">
+                <label className="filter_form_container_label" htmlFor="buy_rent">Buy / Rent</label>
+                <select className="filter_form_container_select no_icon" id="buy_rent" name="buy_rent">
                     <option value="all">All</option>
                     <option value="buy">Buy</option>
                     <option value="rent">Rent</option>
@@ -21,10 +21,10 @@ const Filter = () => {
                 </select>
             </div>
 
-            <div className="container divider">
-                <label className="filter_label" htmlFor="property_type">Property Type</label>
+            <div className="filter_form_container divider">
+                <label className="filter_form_container_label" htmlFor="property_type">Property Type</label>
                 <div className="select-category-container">
-                    <select className="filter_select no_icon" id="property_type" name="property_type">
+                    <select className="filter_form_container_select no_icon" id="property_type" name="property_type">
                         <option value="all">All</option>
                         <option value="new_build">New Build</option>
                         <option value="offices">Offices</option>
@@ -35,9 +35,9 @@ const Filter = () => {
                 </div>
             </div>
 
-            <div className="container divider">
-                <label className="filter_label" htmlFor="town">Town</label>
-                <select className="filter_select no_icon" id="town" name="town">
+            <div className="filter_form_container divider">
+                <label className="filter_form_container_label" htmlFor="town">Town</label>
+                <select className="filter_form_container_select no_icon" id="town" name="town">
                     <option value="all">All</option>
                     <option value="gandia">Gandia</option>
                     <option value="bonrepos">Bonrepos y Mirambell</option>
@@ -52,10 +52,10 @@ const Filter = () => {
                 </select>
             </div>
 
-            <div className="container">
-                <label className="filter_label" htmlFor="price">Price:</label>
+            <div className="filter_form_container">
+                <label className="filter_form_container_label" htmlFor="price">Price:</label>
                 <div className="price-dropdowns flex-center">
-                    <select className="filter_select select_price" id="min-price" name="min-price">
+                    <select className="filter_form_container_select select_price" id="min-price" name="min-price">
                         <option value="min">Min</option>
                         <option value="100,000">$100,000</option>
                         <option value="200,000">$200,000</option>
@@ -69,7 +69,7 @@ const Filter = () => {
                         <option value="1,000,000">$1,000,000</option>
                     </select>
 
-                    <select className="filter_select select_price" id="max-price" name="max-price">
+                    <select className="filter_form_container_select select_price" id="max-price" name="max-price">
                     <option value="max">Max</option>
                         <option value="100,000">$100,000</option>
                         <option value="200,000">$200,000</option>
