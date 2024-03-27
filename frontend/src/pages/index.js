@@ -7,5 +7,5 @@ export { default as Locations } from "../pages/locations";
 export { default as Blog } from "../pages/blog";
 export { default as Contact } from "../pages/contact";
 export { default as Privacy } from "../pages/privacy";
-export { default as PropertyDetails } from "../pages/propertyDetails";
+export { default as PropertyPage } from "../pages/propertyPage";
 

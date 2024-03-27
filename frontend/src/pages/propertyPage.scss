@@ -1,0 +1,8 @@
+@import "../variables";
+@import "../mixins";
+
+
+.property_details_section {
+    @include flex(row, flex-start, flex-start, 0px);
+    padding: 28px;
+}

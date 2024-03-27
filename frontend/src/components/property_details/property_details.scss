@@ -1,0 +1,35 @@
+@import "../../variables";
+@import "../../mixins";
+
+
+.property-details {
+    width: 60%;
+    padding: 8px;
+    padding-right: 28px;
+
+    &-container {
+        margin-bottom: 32px;
+
+        &-amenities {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns */
+            grid-gap: 10px; /* Adjust as needed */
+        }
+    }
+
+    &-h3 {
+        @include font($font-family-rambla, 700, 20px, 20px, left, $search-red);
+        padding-bottom: 16px;
+    }
+
+    &-p {
+        @include font($font-family-rambla, 400, 16px, 19px, left, $color-text-heading-grey);
+        padding-bottom: 12px;
+
+        &-amenity {
+            @include font($font-family-rambla, 400, 16px, 19px, left, $color-text-heading-grey);
+            padding-left: 0;
+            margin: 0px;
+        }
+    }
+}

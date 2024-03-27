@@ -4,10 +4,11 @@ import './property_list.scss'
 
 const PropertyList = () => {
 
-    const properties = propertyDict.map(property => {
+    const propertyArray = Object.entries(propertyDict);
+    const properties = propertyArray.map(([key, value]) => {
         return (
-                <a href={`/properties/${property.id}`} target="_blank">
-                    <PropertyBlock page="property_list" property={property} />
+                <a href={`/properties/${key}`} target="_blank">
+                    <PropertyBlock page="property_list" property={value} />
                 </a>    
             )
     })
@@ -15,6 +16,7 @@ const PropertyList = () => {
     return (
         <div className="properties_list">
             {properties}
+            property list
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import search_icon from '../../assets/icons/search.svg'
+import search_icon from '../../assets/icons/search_white.svg'
 import "./filter.scss";
 
 const Filter = ({ page, more_filters }) => {
