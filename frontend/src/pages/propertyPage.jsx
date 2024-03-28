@@ -1,8 +1,9 @@
 import { useParams } from 'react-router-dom'
 import './propertyPage.scss'
-import PhotoGallery from '../components/photo_gallery/photo_gallery'
+import PhotoGallerySmall from '../components/photo_gallery_small/photo_gallery_small'
 import SearchBar from '../components/search_bar/search_bar'
-import PropertyDetails from '../components/property_details/property_details'
+import PropertyDetailsBody from '../components/property_details_body/property_details_body'
+import PropertyDetailsHeader from '../components/property_details_header/property_details_header'
 import propertyDict from '../data/propertyDict';
 
 const PropertyPage = () => {
@@ -13,9 +14,9 @@ const PropertyPage = () => {
     return (
         <>
             <SearchBar />
-            <PhotoGallery id={propertyId} img_ext={img_ext} />
-            <PropertyDetails id={propertyId} />
-
+            <PropertyDetailsHeader id={propertyId} />
+            <PhotoGallerySmall id={propertyId} img_ext={img_ext} />
+            <PropertyDetailsBody id={propertyId} />
 
             {/* carousel */}
         </>

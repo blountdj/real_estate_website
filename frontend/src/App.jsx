@@ -1,4 +1,5 @@
-import Layout from "./layouts/layout";
+import LayoutPadding from "./layouts/layout_padding";
+import LayoutFull from "./layouts/layout_full";
 import {
   BrowserRouter as Router,
   Route,
@@ -19,45 +20,45 @@ function App() {
       <Router>
         <Routes>
           
-          <Route path="/" element={<Layout logoProp="white-grey">
+          <Route path="/" element={<LayoutFull logoProp="white-grey">
             <Home />
-          </Layout>}/>
+          </LayoutFull>}/>
 
-          <Route path="/properties" element={<Layout logoProp="grey">
+          <Route path="/properties" element={<LayoutFull logoProp="grey">
             <Properties />
-          </Layout>}/>
+          </LayoutFull>}/>
 
-          <Route path="/properties/:propertyId" element={<Layout logoProp="grey">
+          <Route path="/properties/:propertyId" element={<LayoutPadding logoProp="grey">
             <PropertyPage />
-          </Layout>}/>
+          </LayoutPadding>}/>
 
-          <Route path="/services" element={<Layout logoProp="grey">
+          <Route path="/services" element={<LayoutFull logoProp="grey">
             <ServicesPage />
-          </Layout>}/>
+          </LayoutFull>}/>
 
-          <Route path="/who_are_We" element={<Layout logoProp="grey">
+          <Route path="/who_are_We" element={<LayoutFull logoProp="grey">
             <WhoAreWe />
-          </Layout>}/>
+          </LayoutFull>}/>
 
-          <Route path="/expertise" element={<Layout logoProp="grey">
+          <Route path="/expertise" element={<LayoutFull logoProp="grey">
             <Expertise />
-          </Layout>}/>
+          </LayoutFull>}/>
 
-          <Route path="/locations" element={<Layout logoProp="grey">
+          <Route path="/locations" element={<LayoutFull logoProp="grey">
             <Locations />
-          </Layout>}/>
+          </LayoutFull>}/>
 
-          <Route path="/blog" element={<Layout logoProp="grey">
+          <Route path="/blog" element={<LayoutPadding logoProp="grey">
             <Blog />
-          </Layout>}/>
+          </LayoutPadding>}/>
 
-          <Route path="/contact" element={<Layout logoProp="grey">
+          <Route path="/contact" element={<LayoutPadding logoProp="grey">
             <Contact />
-          </Layout>}/>
+          </LayoutPadding>}/>
 
-          <Route path="/privacy_policy" element={<Layout logoProp="grey">
+          <Route path="/privacy_policy" element={<LayoutPadding logoProp="grey">
             <Privacy />
-          </Layout>}/>
+          </LayoutPadding>}/>
 
         </Routes>
       </Router>

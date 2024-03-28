@@ -8,8 +8,11 @@
     z-index: 10;
     position: relative;
     padding-top: 28px;
-    padding-left: 28px;
-    padding-right: 28px;
+}
+
+.home_navbar {
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .logo {
@@ -25,5 +28,5 @@
 
 .links_ul li {
     cursor: pointer;
-    margin-right: 32px;
+    margin-left: 32px;
 }

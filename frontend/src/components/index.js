@@ -5,4 +5,5 @@ export { default as WhyBlock } from "../components/why_block/why_block";
 export { default as Footer } from "../components/footer/footer";
 export { default as ContactForm } from "../components/contact_form/contact_form";
 export { default as BackgroundHeader } from "../components/background_header/background_header";
-export { default as PropertyDetails } from "../components/property_details/property_details";
+export { default as PropertyDetailsBody } from "../components/property_details/property_details_body";
+export { default as PropertyDetailsHeader } from "../components/property_details/property_details_header";

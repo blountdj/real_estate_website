@@ -3,7 +3,7 @@ import consultantsDict from "../../data/consultantsDict";
 import "./contact-consultant.scss";
 
 
-const ContactConsultant = ({name}) => {
+const ContactConsultant = ({page, name}) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -16,7 +16,7 @@ const ContactConsultant = ({name}) => {
 
 
   return (
-    <div className="contact-consultant" id="contact-consultant">
+    <div className={`${page}-contact-consultant contact-consultant`} id="contact-consultant">
 
         <div className="contact-consultant-container">
 

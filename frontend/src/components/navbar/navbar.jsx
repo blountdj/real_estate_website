@@ -3,14 +3,14 @@ import logoWhite from '../../assets/logos/logo.svg'
 import logoGrey from '../../assets/logos/logo_dark_grey.svg'
 import "./navbar.scss";
 
-const Navbar = ({ logo }) => {
+const Navbar = ({ layout, logo }) => {
 
   const logoElem = logo === "grey" 
     ? <a href="/"><img className="logo" src={logoGrey} alt="logo" /></a> 
     : <a href="/"><img className="logo" src={logoWhite} alt="logo" /></a> 
 
   return (
-    <div className="navbar" id="navbar">
+    <div className={`${layout}_navbar navbar`} id="navbar">
         {logoElem}
         <div className="links">
             <ul className="links_ul">

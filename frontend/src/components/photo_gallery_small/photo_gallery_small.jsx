@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './photo_gallery.scss';
+import './photo_gallery_small.scss';
 
-const PhotoGallery = ({ id, img_ext }) => {
+const PhotoGallerySmall = ({ id, img_ext }) => {
     const upperCaseId = id.toUpperCase();
     const [images, setImages] = useState([]);
 
@@ -21,6 +21,12 @@ const PhotoGallery = ({ id, img_ext }) => {
         fetchImages();
     }, [id]);
 
+    const [showOverlay, setShowOverlay] = useState(false);
+
+    const handleButtonClick = () => {
+        setShowOverlay(true);
+    };
+
     return (
         <div className="photo-gallery">
             {images.map((image, index) => (
@@ -32,9 +38,16 @@ const PhotoGallery = ({ id, img_ext }) => {
                 />
             ))}
 
-            <button className='photo-gallery-button'>sell all pictures</button>
+            <button className='photo-gallery-button' onClick={handleButtonClick}>sell all pictures</button>
+
+            {showOverlay && (
+                <div className="overlay">
+                    {/* Overlay content */}
+                    OVERLAY!
+                </div>
+            )}
         </div>
     );
 };
 
-export default PhotoGallery;
+export default PhotoGallerySmall;

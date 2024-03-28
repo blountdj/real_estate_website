@@ -1,11 +1,6 @@
 @import "../../variables";
 @import "../../mixins";
 
-// there are 5 images, the first image should span 2 rows and 2 columns and  the rest of the images should span 1 row and 1 column. do this using nth child
-
-
-
-
 
 .photo-gallery {
   display: grid;
@@ -14,7 +9,7 @@
   grid-gap: 10px;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding-top: 20px;
   width: 100%;
   position: relative;
 
