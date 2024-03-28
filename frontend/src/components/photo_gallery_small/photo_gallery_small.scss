@@ -39,4 +39,59 @@
   }
 }
 
+.all_pictures_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  // bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 9999;
+  @include flex(column, center, center, 40px);
+  overflow-y: auto; /* Make the overlay scrollable on the y-axis */
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+
+  &-close {
+    position: sticky;
+    top: 20px;
+    right: 0px;
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    border: none;
+    @include font($font-family-rambla, 400, 15px, 18px, center, #333);
+    cursor: pointer;
+  }
+
+  &-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns of equal width */
+    grid-auto-rows: auto; /* Automatically size rows based on content */
+    grid-gap: 10px; /* Gap between grid items */
+    height: 100%;
+    width: 60%;
+   
+
+    &-image {
+
+      &.large {
+        grid-column: span 2; /* Span 2 columns */
+        grid-row: span 2; /* Span 2 rows */
+        background-color: yellow;
+        width: 100%;
+      }
+
+      &.small {
+        grid-column: span 1; /* Span 2 columns */
+        grid-row: span 1; /* Span 2 rows */
+        width: 100%;
+      }
+    }
+  }
+
+}
 

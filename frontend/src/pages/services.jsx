@@ -1,13 +1,15 @@
 import BackgroundHeader from '../components/background-header/background-header'
-import ServicesSection from '../containers/services/services/services'
+import ServicesSection from '../containers/services/services'
 import Info from '../components/info/info'
 import ContactForm from '../components/contact-form/contact-form'
+import Navbar from "../components/navbar/navbar";
 import './services.scss'
 
 const ServicesPage = () => {
 
     return (
         <>
+            <Navbar layout="home" scroll_threshold="120" />
             <BackgroundHeader section="services" h1_type="_1" h1="our services"/>
             <ServicesSection />
             <Info

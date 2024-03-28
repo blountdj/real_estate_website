@@ -7,6 +7,7 @@ const Properties = () => {
 
     return (
         <>
+            {/* <Navbar layout="contact" scroll_threshold="0" /> */}
             <div className="filter_container">
                 <Filter page="properties" more_filters="true" />
             </div>

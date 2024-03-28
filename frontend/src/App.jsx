@@ -20,43 +20,43 @@ function App() {
       <Router>
         <Routes>
           
-          <Route path="/" element={<LayoutFull logoProp="white-grey">
+          <Route path="/" element={<LayoutFull>
             <Home />
           </LayoutFull>}/>
 
-          <Route path="/properties" element={<LayoutFull logoProp="grey">
+          <Route path="/properties" element={<LayoutFull>
             <Properties />
           </LayoutFull>}/>
 
-          <Route path="/properties/:propertyId" element={<LayoutPadding logoProp="grey">
+          <Route path="/properties/:propertyId" element={<LayoutPadding>
             <PropertyPage />
           </LayoutPadding>}/>
 
-          <Route path="/services" element={<LayoutFull logoProp="grey">
+          <Route path="/services" element={<LayoutFull>
             <ServicesPage />
           </LayoutFull>}/>
 
-          <Route path="/who_are_We" element={<LayoutFull logoProp="grey">
+          <Route path="/who_are_We" element={<LayoutFull>
             <WhoAreWe />
           </LayoutFull>}/>
 
-          <Route path="/expertise" element={<LayoutFull logoProp="grey">
+          <Route path="/expertise" element={<LayoutFull>
             <Expertise />
           </LayoutFull>}/>
 
-          <Route path="/locations" element={<LayoutFull logoProp="grey">
+          <Route path="/locations" element={<LayoutFull>
             <Locations />
           </LayoutFull>}/>
 
-          <Route path="/blog" element={<LayoutPadding logoProp="grey">
+          <Route path="/blog" element={<LayoutFull>
             <Blog />
-          </LayoutPadding>}/>
+          </LayoutFull>}/>
 
-          <Route path="/contact" element={<LayoutPadding logoProp="grey">
+          <Route path="/contact" element={<LayoutFull>
             <Contact />
-          </LayoutPadding>}/>
+          </LayoutFull>}/>
 
-          <Route path="/privacy_policy" element={<LayoutPadding logoProp="grey">
+          <Route path="/privacy_policy" element={<LayoutPadding>
             <Privacy />
           </LayoutPadding>}/>
 

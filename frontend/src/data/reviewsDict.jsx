@@ -1,0 +1,9 @@
+const reviewsData = [
+    {"name": "Livia Cruz", "date": "October 2, 2023", "stars": 5, "review": "Carla estuvo fenomenal durante todo el proceso, desde el primer contacto hasta el cierre de la compra. También nos ayudó con conexiones y contactos que fueron extremadamente importantes para nuestra"},
+    {"name": "Carmen Fajmom", "date": "September 27, 2023", "stars": 5, "review": "Muy muy recomendable! Tuvimos la grandísima suerte de conocer a Carla en la visita al inmueble que finalmente adquirimos. En un tiempo record (menos de 48 horas a las puertas del mes de agosto) y con gran profesionalidad y eficiencia nos asesoró y acompañó durante el proceso de compra y en todos los tramites posteriores. Sin duda repetiriamos!! Muchisimas gracias Carla!!"},
+    {"name": "Isabel P", "date": "September 27, 2023", "stars": 5, "review": "Experiencia muy positiva, todo con Carla han sido facilidades, una gran profesional, atenta, resolutiva y muy amable. Todo super bien gestionado y muy rápido. Lo recomendaría y repetiría sin ninguna duda!Muy agradecida por todo, trato exquisito y trabajo impecable."},
+    {"name": "ignissz", "date": "September 27, 2023", "stars": 5, "review": "Muy satisfecho y Carla muy profesional . Recomendable 100%"},
+    {"name": "Raquel Garcia Martinez", "date": "December 19, 2023", "stars": 5, "review": "Dilatada experiencia y excelente equipo humano. Quiero destacar la vocación, el compromiso y el enfoque a la excelencia que mantiene el equipo en todo momento. Recomiendo 100% la agencia y quiero destacar las gestiones realizadas por María Pandurova, que ha sabido liderar esta operación, culminándola con éxito."},
+  ]
+
+  export default reviewsData

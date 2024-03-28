@@ -2,7 +2,7 @@ import React from "react";
 import "./service_block.scss";
 
 
-const ServiceBlock = ({ page, title, text, side, button, button_text, image, image_alt }) => {
+const ServiceBlock = ({ page, title, text, side, button, button_text, image }) => {
 
   const buttonElement = button === "true" ? <button className={`${page}_serviceBlock_button ${side}`}>{button_text}</button> : ""
 
@@ -18,7 +18,7 @@ const ServiceBlock = ({ page, title, text, side, button, button_text, image, ima
       </div>
 
       <div className={`${page}_serviceBlock_image`}>
-        <img className={`${page}_serviceBlock_image_image`} src={image} alt={image_alt} />
+        <img className={`${page}_serviceBlock_image_image`} src={image} alt={`${title} image`} />
       </div>
 
     </div>

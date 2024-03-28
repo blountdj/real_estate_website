@@ -8,9 +8,13 @@
     z-index: 10;
     position: relative;
     padding-top: 28px;
+    position: sticky;
+    top: 0px;
+    z-index: 9998;
 }
 
-.home_navbar {
+.home_navbar,
+.contact_navbar {
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -30,3 +34,20 @@
     cursor: pointer;
     margin-left: 32px;
 }
+
+
+div.scrolled {
+    background-color: white;
+    color: $color-text-heading-grey;
+    // background-color: yellow;
+}
+
+div.not_scrolled {
+    // background-color: green;
+    // position: absolute;
+    height: 0;
+    padding-top: 0px;
+    transform: translateY(60px);
+    color: white;
+}
+

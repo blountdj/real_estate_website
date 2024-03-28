@@ -1,38 +1,20 @@
 import BackgroundHeader from '../components/background-header/background-header';
 import ContactForm from '../components/contact-form/contact-form';
 import Consultant from '../components/consultant/consultant';
-import camilo_img from '../assets/pages/who_we_are/camilo.jpg';
-import marta_img from '../assets/pages/who_we_are/marta.jpg';
-import carla_img from '../assets/pages/who_we_are/carla.jpg';
-import nerea_img from '../assets/pages/who_we_are/nerea.jpg';
-import maria_img from '../assets/pages/who_we_are/maria.jpg';
-import regis_img from '../assets/pages/who_we_are/regis.jpg';
-import cristina_img from '../assets/pages/who_we_are/cristina.jpg';
-import maria2_img from '../assets/pages/who_we_are/maria2.png';
-import maria3_img from '../assets/pages/who_we_are/maria3.jpg';
+import consultantsDict from '../data/consultantsDict';
+import Navbar from '../components/navbar/navbar';
 import './who-we-are.scss'
 
 const WhoAreWe = () => {
 
-    const consultantsDict = [
-        {"name": "CAMILO SANABRIA", "title": "Real Estate Consultant & CEO", "photo": camilo_img},
-        {"name": "MARTA MARÍN CLÉRIGUES", "title": "Real Estate Consultant", "photo": marta_img},
-        {"name": "CARLA CADENAS CAÑAMÁS", "title": "Real Estate Consultant", "photo": carla_img},
-        {"name": "NEREA VIAN BALDAJOS", "title": "Rental Consultant", "photo": nerea_img},
-        {"name": "MARIA MARTÍ MORENO", "title": "Real Estate Consultant", "photo": maria_img},
-        {"name": "REGIS LOPEZ LANG", "title": "Real Estate Consultant", "photo": regis_img},
-        {"name": "CRISTINA CARO UNSAIN", "title": "Real Estate Consultant", "photo": cristina_img},
-        {"name": "MARÍA PANDUROVA", "title": "Office Manager", "photo": maria2_img},
-        {"name": "MARIA SANABRIA LUQUE", "title": "Team Assistant", "photo": maria3_img},
-    ]
-
-    const consultants = consultantsDict.map(consultant => (
-        <Consultant key={consultant.name} name={consultant.name} title={consultant.title} photo={consultant.photo}/>
-    ))
-
+    const consultantsArray = Object.values(consultantsDict);
+    const consultants = consultantsArray.map(consultant => (
+        <Consultant key={consultant.name} name={consultant.name} title={consultant.title} photo={consultant.image}/>
+    ));
 
     return (
         <>
+            <Navbar layout="home" scroll_threshold="100" />
             <BackgroundHeader section="who-we-are" h1_type="_2" h1="we're monserrate, valencia's premium independent estate agency"/>
 
             <div className="whoWeAre_text">

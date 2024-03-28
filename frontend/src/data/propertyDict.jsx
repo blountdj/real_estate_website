@@ -1,7 +1,7 @@
 import { property01, property02, property03, property04, property05, 
     property06, property07, property08, property09, property10, 
     property11, property12, property13, property14 } 
-    from './imports'
+    from './property_imports'
 
 const propertyDict = {
     "v5212": {"type": "buy", "price": 590000, "title": "Fabulous apartment very close to Plaza del Ayuntamiento", "location": "valencia", "description": "142 sqm House", "bedrooms": 3, "bathrooms": 2, "img": property01, "description_full": ["Are you looking to live in one of the most central streets in the city?", "Monserrate presents an exclusive property on Periodista Azzati Street, very close to Plaza del Ayuntamiento.", "It has 3 bedrooms with the possibility of 4 since the bright living room and dining room are separated by sliding doors with independent access. The master bedroom and living room have a balcony and views of Calle San Vicente.", "The very good size kitchen has a laundry area and pantry.", "It has double-glazed windows, parquet flooring, hot and cold air conditioning through ducts and built-in wardrobes in two of the bedrooms.", "The building has a morning and afternoon concierge, and the price also includes a parking space in the same building.", "A great opportunity in the city center!"], "amenities": ["Ducted system air conditioning", "Built-in wardrobes", "Lift", "Balcony", "Climalit carpentry", "Independent kitchen", "Kitchen office", "Concierge", "Exterior", "Community parking", "Laundry space", "Parquet"], "coordinates": [39.466667, -0.375000], "consultant": "marta", "img_ext": "jpg"},

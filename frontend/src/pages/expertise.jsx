@@ -1,12 +1,14 @@
 import BackgroundHeader from '../components/background-header/background-header'
 import Info from '../components/info/info'
 import ContactForm from '../components/contact-form/contact-form'
+import Navbar from "../components/navbar/navbar";
 import './expertise.scss'
 
 const Expertise = () => {
 
     return (
         <>
+            <Navbar layout="home" scroll_threshold="120" />
             <BackgroundHeader section="expertise" h1_type="_1" h1="services for property owners"/>
             <Info 
                 page="expertise"

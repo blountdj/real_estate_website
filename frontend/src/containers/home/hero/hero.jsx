@@ -2,6 +2,7 @@ import React from "react";
 import Filter from '../../../components/filter/filter';
 import "./hero.scss";
 
+
 const Hero = () => {
   return (
     <section className="hero_section" id="hero">
