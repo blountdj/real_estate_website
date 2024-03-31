@@ -61,27 +61,27 @@ const Footer = () => {
               </div>
               <p className="footer_top_main_3_contact">contacto@monserrateinmobiliaria.com</p>
               <div className="footer_top_main_3_contact_socials">
-                <div className="svg-container flex-center">
-                  <img href="#" className="social_media_logo facebook" src={facebook} alt="facebook logo" />
-                </div>
-                <div className="svg-container flex-center">
+                <a href="#" className="svg-container flex-center">
+                  <img className="social_media_logo facebook" src={facebook} alt="facebook logo" />
+                </a>
+                <a  href="#" className="svg-container flex-center">
                   <img href="#" className="social_media_logo" src={linkedin} alt="linkedin logo" />
-                </div>
-                <div className="svg-container flex-center">
-                  <img href="#" className="social_media_logo" src={instagram} alt="instagram logo" />
-                </div>
-                <div className="svg-container flex-center">
-                  <img href="#" className="social_media_logo" src={youtube} alt="youtube logo" />
-                </div>
+                </a>
+                <a href="#" className="svg-container flex-center">
+                  <img className="social_media_logo" src={instagram} alt="instagram logo" />
+                </a>
+                <a  href="#" className="svg-container flex-center">
+                  <img className="social_media_logo" src={youtube} alt="youtube logo" />
+                </a>
               </div>
             </div>
           </div>
           <div className="footer_top_copyright">Copyright © 2014 - 2024 Monserrate</div>
           <div className="footer_top_policies">
             <ul className="footer_top_policies_ui">
-              <li>General Conditions of Use</li>
-              <li>Cookies Policy</li>
-              <li>Privacy Policy</li>
+              <li><a>General Conditions of Use</a></li>
+              <li><a>Cookies Policy</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
             </ul>
           </div>
         </div>

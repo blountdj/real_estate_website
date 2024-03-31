@@ -5,6 +5,7 @@ import SearchBar from '../components/search_bar/search_bar'
 import PropertyDetailsBody from '../components/property_details_body/property_details_body'
 import PropertyDetailsHeader from '../components/property_details_header/property_details_header'
 import propertyDict from '../data/propertyDict';
+import Navbar from '../components/navbar/navbar'
 
 const PropertyPage = () => {
     const { propertyId } = useParams()
@@ -13,6 +14,7 @@ const PropertyPage = () => {
 
     return (
         <>
+            <Navbar layout="contact" scroll_threshold="0" />
             <SearchBar />
             <PropertyDetailsHeader id={propertyId} />
             <PhotoGallerySmall id={propertyId} img_ext={img_ext} />

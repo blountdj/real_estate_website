@@ -50,14 +50,17 @@
   z-index: 9999;
   @include flex(column, center, center, 40px);
   overflow-y: auto; /* Make the overlay scrollable on the y-axis */
-  padding-top: 100px;
+  padding-top: 60px;
   padding-bottom: 100px;
 
+  &_container {
+    width: 90%;
+    position: sticky;
+    top: 0px;
+    @include flex(row, center, end, 0px);
+  }
 
   &-close {
-    position: sticky;
-    top: 20px;
-    right: 0px;
     background-color: white;
     color: black;
     padding: 12px 24px;
@@ -95,3 +98,16 @@
 
 }
 
+.slider_overlay {
+  @include fullPageOverlay(white);
+  @include flex(column, center, center, 40px);
+  overflow-y: auto; /* Make the overlay scrollable on the y-axis */
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+  &_gallery_image {
+    width: 90%;
+    height: 90%;
+    // object-fit: cover;
+  }
+}

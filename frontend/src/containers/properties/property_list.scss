@@ -22,6 +22,7 @@
 
     &_img_container {
         height: 300px;
+        width: 100%;
 
         &::after {
             @include overlay($box-shadow-01);

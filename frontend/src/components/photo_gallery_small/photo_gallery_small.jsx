@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import close_icon from '../../assets/icons/close.svg';
+import PropertyPhotoCarousel from '../property-photo-carousel/property-photo-carousel';
 import './photo_gallery_small.scss';
 
 const PhotoGallerySmall = ({ id, img_ext }) => {
     const upperCaseId = id.toUpperCase();
     const [images5, setImages5] = useState([]);
     const [imagesAll, setImagesAll] = useState([]);
+    const [clickedImage, setClickedImage] = useState(0);
 
     useEffect(() => {
         const fetchImages = async () => {
@@ -51,16 +53,17 @@ const PhotoGallerySmall = ({ id, img_ext }) => {
         fetchImages();
     }, [id]);
 
+    const [showFullPageOverlay, setShowFullPageOverlay] = useState(false);
 
-
-    const [showOverlay, setShowOverlay] = useState(false);
-
-    const handleButtonClickOpen = () => {
-        setShowOverlay(true);
+    const handleFullPageOverlayButtonClickToggle = () => {
+        setShowFullPageOverlay(!showFullPageOverlay);
     };
 
-    const handleButtonClickClose = () => {
-        setShowOverlay(false);
+    const [showSliderOverlay, setShowSliderOverlay] = useState(false);
+
+    const handleSliderOverlayButtonClickToggle = (imageNo) => {
+        setShowSliderOverlay(!showSliderOverlay);
+        setClickedImage(imageNo);
     };
 
     return (
@@ -71,17 +74,17 @@ const PhotoGallerySmall = ({ id, img_ext }) => {
                     src={image}
                     alt={`Image ${index}`}
                     className="photo-gallery-image"
+                    onClick={() => handleSliderOverlayButtonClickToggle(index)}
                 />
             ))}
 
-            <button className='photo-gallery-button' onClick={handleButtonClickOpen}>sell all pictures</button>
+            <button className='photo-gallery-button' onClick={handleFullPageOverlayButtonClickToggle}>sell all pictures</button>
 
-
-            {showOverlay && (
+            {showFullPageOverlay && (
                 <div className="all_pictures_overlay">
-                    <button className='all_pictures_overlay-close' onClick={handleButtonClickClose}><img src={close_icon} alt="close icon" /></button>
-                    {/* Overlay content */}
-                    
+                    <div className="all_pictures_overlay_container">
+                        <button className='all_pictures_overlay-close' onClick={handleFullPageOverlayButtonClickToggle}><img src={close_icon} alt="close icon" /></button>
+                    </div>
                     <div className="all_pictures_overlay-gallery">
                     {imagesAll.map((image, index) => (
                         <img
@@ -89,10 +92,15 @@ const PhotoGallerySmall = ({ id, img_ext }) => {
                             src={image}
                             alt={`Image ${index}`}
                             className={`all_pictures_overlay-gallery-image ${index % 3 === 0 ? 'large' : 'small'}`}
+                            onClick={() => handleSliderOverlayButtonClickToggle(index)}
                         />
                     ))}
                     </div>
                 </div>
+            )}
+
+            {showSliderOverlay && (
+                <PropertyPhotoCarousel images={imagesAll} currentImage={clickedImage} onClose={handleSliderOverlayButtonClickToggle} />
             )}
         </div>
     );

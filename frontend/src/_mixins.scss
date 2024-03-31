@@ -48,3 +48,13 @@
     line-height: $line-height;
     color: $color;
 }
+
+@mixin fullPageOverlay($color) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+    z-index: 9999;
+}
