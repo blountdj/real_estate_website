@@ -1,26 +1,54 @@
 @import "../../../variables";
 @import "../../../mixins";
 
-div.why {
-    /* height: 1000px; */
-    display: flex;
-    gap: 70px;
+.why {
+    @include flex(column, center, center, 32px);
     padding-top: 60px;
     padding-bottom: 80px;
 
+    &_text {
+        @include flex(column, center, center, 32px);
+        padding-bottom: 32px;
+    }
+
     &_components {
-        flex-wrap: wrap;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 52px;
         width: 90%;
-        gap: 40px;
     }
 
     &_h2 {
-        @include font($font-family-asul, 700, 21px, 25px, left, black);
+        @include font($font-family-asul, 700, 21px, 25px, left, $color-text-heading-grey);
     }
 
     &_p {
-        @include font($font-family-rambla, 400, 22px, 27px, center, black);
-        width: 60%;
+        @include font($font-family-rambla, 400, 22px, 27px, center, $color-text-grey);
+        // width: 60%;
+    }
+
+    &_button {
+        @include font($font-family-rambla, 400, 16px, 16px, left, black);
+        padding: 16px 28px;
+        cursor: pointer;
+        text-transform: uppercase;
+
+        &.white {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+
+            &:hover {
+                background-color: black;
+                color: white;
+                transition: background-color 0.4s ease, color 0.4s ease;
+            }
+
+            &:not(:hover) {
+                transition: all 0.4s ease;
+            }
+        }
     }
 }
 

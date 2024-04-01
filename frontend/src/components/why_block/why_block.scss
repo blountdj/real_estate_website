@@ -2,19 +2,22 @@
 @import "../../mixins";
 
 .whyBlock {
-    @include flex(row, center, space-between, 0px);
+    @include flex(row, flex-start, space-between, 0px);
     // display: flex;
     // flex-direction: row;
-    width: 600px;
+    width: 100%;
+    background-color: $color-why-background;
 
     &_text {
-        @include flex(row, center, center, 24px);
+        @include flex(row, flex-start, center, 24px);
         width: 100%;
         color: $color-text-heading-grey;
         padding-left: 24px;
+        padding-right: 24px;
 
         &_h3 {
             text-transform: uppercase;
+            padding-top: 40px;
         }
     }
 }

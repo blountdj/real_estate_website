@@ -6,7 +6,7 @@
     @include fullPageOverlay(black);
     @include flex(column, center, center, 0px);
     width: 100%;
-    
+
 
     &-controls {
         @include flex(row, center, space-between, 0px);

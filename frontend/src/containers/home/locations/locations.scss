@@ -8,13 +8,18 @@
     padding-bottom: 120px;
     gap: 40px;
 
-    &_h2 {
-        text-transform: uppercase;
-        @include font($font-family-asul, 700, 21px, 25px, left, $color-text-heading-grey);
-    }
+    &_top {
+        @include flex(column, center, center, 36px);
+        width: 60%;
 
-    &_p {
-        @include font($font-family-rambla, 400, 22px, 27px, left, $color-text-grey);
+        &_h2 {
+            text-transform: uppercase;
+            @include font($font-family-asul, 700, 21px, 25px, center, $color-text-heading-grey);
+        }
+
+        &_p {
+            @include font($font-family-rambla, 400, 22px, 27px, center, $color-text-grey);
+        }
     }
 
     &_controllers {

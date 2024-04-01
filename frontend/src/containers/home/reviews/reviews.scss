@@ -2,10 +2,14 @@
 @import "../../../mixins";
 
 .reviews {
-    gap: 30px;
+    @include flex(column, center, center, 32px);
     /* width: 85%; */
     padding-top: 60px;
     padding-bottom: 60px;
+
+    &_container {
+        @include flex(column, center, center, 0);
+    }
 
     &_h2 {
         @include font($font-family-asul, 700, 21px, 25px, left, $color-text-heading-grey);

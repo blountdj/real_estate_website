@@ -8,4 +8,6 @@ export { default as Blog } from "../pages/blog";
 export { default as Contact } from "../pages/contact";
 export { default as Privacy } from "../pages/privacy";
 export { default as PropertyPage } from "../pages/propertyPage";
-
+export { default as Cookies } from "./cookies";
+export { default as Conditions } from "./conditions";
+export { default as NotFound } from "./notFound";

@@ -79,9 +79,9 @@ const Footer = () => {
           <div className="footer_top_copyright">Copyright © 2014 - 2024 Monserrate</div>
           <div className="footer_top_policies">
             <ul className="footer_top_policies_ui">
-              <li><a>General Conditions of Use</a></li>
-              <li><a>Cookies Policy</a></li>
-              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/conditions">General Conditions of Use</a></li>
+              <li><a href="/cookies_policy">Cookies Policy</a></li>
+              <li><a href="/privacy_policy">Privacy Policy</a></li>
             </ul>
           </div>
         </div>

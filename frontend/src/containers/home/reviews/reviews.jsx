@@ -48,9 +48,9 @@ const Reviews = () => {
   )})
 
   return (
-    <section className="reviews flex-center flex-column" id="reviews">
+    <section className="reviews" id="reviews">
         <h2 className="reviews_h2">reviews</h2>
-        <div className="container flex-center">
+        <div className="reviews_container">
           <p className="reviews_p">Are you thinking of selling, buying, or renting an apartment in Valencia? </p>
           <p className="reviews_p">Monserrate can be your best ally to cover your needs.</p>
           <p className="reviews_p">These are the opinions of our customers.</p>

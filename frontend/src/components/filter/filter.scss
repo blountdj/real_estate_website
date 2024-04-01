@@ -2,7 +2,6 @@
 @import "../../mixins";
 
 
-
 .filter {
     &_form {
         @include flex(row, center, flex-start, 12px);

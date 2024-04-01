@@ -3,10 +3,19 @@
 
 .campolivar {
     @include backgroundImage('campolivar.jpg');
-    @include flex(row, center, space-between, 0px);
-    height: 400px;
+    @include flex(row, center, space-between, 52px);
+    // @include overlay($linear-gradient-to-right-02-01);
+    height: 600px;
     position: relative;
     color: white;
+
+    &::before {
+        @include overlay($linear-gradient-to-bottom-05-02); 
+    }
+    
+    &::after {
+        @include overlay(#59595934); 
+    }
 
     &_overlay {
         z-index: 0;
@@ -14,14 +23,39 @@
     }
 
     &_container {
+        @include flex(column, flex-start, space-between, 40px);    
         z-index: 1;
         position: relative;
         padding-left: 150px;
-        gap: 24px;
-        display: flex;
+    }
+
+    &_h2 {
+        @include font($font-family-asul, 700, 30px, 36px, left, white);
     }
 
     &_p {
-        width: 60%;
+        @include font($font-family-rambla, 400, 16px, 19px, left, white);
+        width: 50%;
+    }
+
+    &_button {
+        @include font($font-family-rambla, 400, 16px, 16px, left, white);
+        padding: 16px 28px;
+        cursor: pointer;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 1px solid white;
+        width: fit-content;
+
+        &:hover {
+            background-color: white;
+            color: black;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        &:not(:hover) {
+            transition: all 0.4s ease;
+        }
+        
     }
 }

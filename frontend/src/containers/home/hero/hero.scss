@@ -21,9 +21,11 @@
             position: relative;
         }
         &_h1 {
-            font-size: 60px;
+            @include font($font-family-asul, 700, 60px, 72px, center, white);
+            text-transform: uppercase;
             z-index: 2;
-            color: white;
+            padding-bottom: 16px;
+            
         }
         &_p {
             font-size: 24px;

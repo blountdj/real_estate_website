@@ -1,0 +1,17 @@
+@import "../variables";
+@import "../mixins";
+
+.notFound {
+
+    &_h1 {
+        @include font($font-family-rambla, 700, 35px, 42px, center, $color-text-heading-grey);
+        text-transform: uppercase;
+        padding-top: 80px;
+    }
+
+    &_p {
+        @include font($font-family-rambla, 400, 16px, 19px, center, $color-text-heading-grey);
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+}

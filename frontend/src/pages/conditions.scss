@@ -1,0 +1,44 @@
+@import "../mixins";
+@import "../variables";
+
+.conditions_main {
+    @include flex(column, center, center, 0px);
+    color: $color-text-heading-grey;
+    width: 100%;
+
+    &_h1 {
+        @include font($font-family-rambla, 700, 35px, 42px, center, $color-text-heading-grey);
+        text-transform: uppercase;
+    }
+
+    &_container {
+        @include flex(column, flex-start, flex-start, 0px);
+        width: 80%;
+        padding: 80px;
+    }
+
+    &_h2 {
+        @include font($font-family-rambla, 700, 18px, 19px, left, $color-text-heading-grey);
+        padding-top: 40px;
+    }
+
+    &_p {
+        @include font($font-family-rambla, 400, 16px, 19px, left, $color-text-heading-grey);
+        padding-top: 20px;
+    }
+
+    &_span {
+        font-weight: 700;
+        padding-right: 4px;
+    }
+
+    &_li {
+        @include font($font-family-rambla, 400, 16px, 19px, left, $color-text-heading-grey);
+        list-style-type: disc;
+        margin-left: 18px;
+
+        &:first-child {
+            margin-top: 16px;
+        }
+    }
+}

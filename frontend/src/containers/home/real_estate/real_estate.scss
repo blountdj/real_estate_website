@@ -12,6 +12,15 @@
         z-index: 1; 
     }
 
+    &_h2 {
+        @include font($font-family-asul, 700, 30px, 36px, left, white);
+        text-transform: uppercase;
+    }
+
+    &_p {
+        @include font($font-family-rambla, 400, 16px, 19px, left, white);
+    }
+
     &_container {
         @include flex(column, flex-start, center, 24px);
         margin-left: 160px;
@@ -19,5 +28,25 @@
         width: 400px;
         z-index: 5;
         position: relative;
+    }
+
+    &_button {
+        @include font($font-family-rambla, 400, 16px, 16px, left, white);
+        padding: 16px 28px;
+        cursor: pointer;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 1px solid white;
+        width: fit-content;
+
+        &:hover {
+            background-color: white;
+            color: black;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        &:not(:hover) {
+            transition: all 0.4s ease;
+        }
     }
 }

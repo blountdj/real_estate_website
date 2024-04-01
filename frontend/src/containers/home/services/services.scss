@@ -2,7 +2,8 @@
 @import "../../../mixins";
 
 
-h2.services_h2 {
+.services_h2 {
+    @include font($font-family-asul, 700, 21px, 25px, left, #333);
     text-transform: uppercase;
     padding-top: 80px;
     padding-bottom: 60px;
@@ -28,11 +29,13 @@ h2.services_h2 {
         }
 
         &_h3 {
+            @include font($font-family-asul, 700, 16px, 19px, left, white);
             text-transform: uppercase;
             padding-left: 30px;
 
             &.l {
                 color: white;
+
             }
 
             &.r {
@@ -41,7 +44,7 @@ h2.services_h2 {
         }
                 
         &_p {
-            color: #999;
+            @include font($font-family-rambla, 400, 16px, 19px, left, $color-text-grey);
         }
 
 
@@ -89,11 +92,31 @@ h2.services_h2 {
         &.l {
             border: solid 1px white;
             @include font($font-family-rambla, 400, 15px, 18px, center, white);
+            
+            &:hover {
+                background-color: white;
+                color: black;
+                transition: all 0.4s ease;
+            }
+
+            &:not(:hover) {
+                transition: all 0.4s ease;
+            }
         }
 
         &.r {
             border: solid 1px black;
             @include font($font-family-rambla, 400, 15px, 18px, center, black);
+
+            &:hover {
+                background-color: $color-nearly_black;
+                color: white;
+                transition: all 0.4s ease;
+            }
+
+            &:not(:hover) {
+                transition: all 0.4s ease;
+            }
         }
     }
 }

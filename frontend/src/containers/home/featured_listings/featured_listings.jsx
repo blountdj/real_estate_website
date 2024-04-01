@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import Carousel from '../../../components/carousel/carousel.jsx';
 import "./featured_listings.scss";
 
@@ -12,13 +13,13 @@ const featuredListings = () => {
 will find luxury properties for sale and for rent in Valencia, with excellent locations, and with
 designs and services that make them truly unique and special.</p>
         <div className="btns_container flex-center">
-          <button className="button button-white-black">Sell all</button>
-          <button className="button button-black-white">Buy</button>
-          <button className="button button-black-white">Rent</button>
+          <button className="featured_listings_button black">Sell all</button>
+          <button className="featured_listings_button white">Buy</button>
+          <button className="featured_listings_button white">Rent</button>
         </div>
       </div>
       <Carousel />
-      <button className="button button-black-white light-grey">SEE ALL PROPERTIES</button>
+      <button className="featured_listings_button white" onClick={() => window.location.href = '/properties'}>SEE ALL PROPERTIES</button>
 
     </section>
   )
