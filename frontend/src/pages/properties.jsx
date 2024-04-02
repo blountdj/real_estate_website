@@ -2,9 +2,12 @@ import './properties.scss'
 import Filter from '../components/filter/filter'
 import Navbar from '../components/navbar/navbar'
 import PropertyList from '../containers/properties/property_list'
+import useScrollVisibility from '../utilities/useScrollVisibility';
 
 
 const Properties = () => {
+
+    const isVisible = useScrollVisibility(`.property_list_container`);
 
     return (
         <>
@@ -12,7 +15,7 @@ const Properties = () => {
             <div className="filter_container">
                 <Filter page="properties" more_filters="true" />
             </div>
-            <div className="property_list_container">
+            <div className={`property_list_container ${isVisible ? 'visible' : 'notVisible'}`}>
                 <PropertyList />
             </div>
         </>

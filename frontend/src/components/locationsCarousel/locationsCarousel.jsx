@@ -39,9 +39,9 @@ const LocationsCarousel = ({page}) => {
     const carouselWidth = screenWidth * 0.90;
     const gap = carouselWidth * 0.0133;
 
-    console.log('screenWidth', screenWidth)
-    console.log('carouselWidth', carouselWidth)
-    console.log((carouselWidth / 4)  + (gap / 3))
+    // console.log('screenWidth', screenWidth)
+    // console.log('carouselWidth', carouselWidth)
+    // console.log((carouselWidth / 4)  + (gap / 3))
 
     const translateValue = `translateX(calc(${-currentImageIndex} * ${(carouselWidth / 4) + (gap/3)}px))`;
     

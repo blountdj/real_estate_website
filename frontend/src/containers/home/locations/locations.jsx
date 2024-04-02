@@ -1,29 +1,23 @@
 import React from "react";
 import LocationsCarousel from "../../../components/locationsCarousel/locationsCarousel"; 
+import useScrollVisibility from '../../../utilities/useScrollVisibility';
 import "./locations.scss";
-// import {   
-  // los_monasterios,
-  // alfinach,
-  // monte_picayo,
-  // valencia,
-  // other_urbanisations, 
-  // controller_left,
-  // controller_right
-// } from './imports';
+
 
 const Locations = () => {
 
-  return (
-    <section className="locations flex-center flex-center-column" id="locations">
-        <div className="locations_top">
-          <h2 className="locations_top_h2">locations</h2>
-          <p className="locations_top_p">Exclusive properties in the best areas of Valencia and surroundings. We find the right place for you in the best locations.</p>
-        </div>
+  const isVisible = useScrollVisibility('.locations_top');
 
-          {/* <div className="locations_elements "> */}
-            <LocationsCarousel page="home" />
-            {/* </div> */}
-  
+  return (
+    <section className="locations" id="locations">
+
+      <div className={`locations_top ${isVisible ? 'visible' : ''}`}>
+        <h2 className="locations_top_h2">locations</h2>
+        <p className="locations_top_p">Exclusive properties in the best areas of Valencia and surroundings. We find the right place for you in the best locations.</p>
+      </div>
+
+      <LocationsCarousel page="home" />
+
     </section>
   )
 };

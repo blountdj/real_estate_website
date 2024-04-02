@@ -2,6 +2,7 @@
 @import "../../../mixins";
 
 .locations {
+    @include flex(column, center, center, 36px);
     width: 100%;
     text-align: center;
     padding-top: 60px;
@@ -9,8 +10,17 @@
     gap: 40px;
 
     &_top {
-        // @include flex(column, center, center, 36px);
+        @include flex(column, center, center, 36px);
         width: 60%;
+        transition: all 1s ease-in-out;
+        opacity: 0;
+        transform: translateY(25%);
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        
 
         &_h2 {
             text-transform: uppercase;

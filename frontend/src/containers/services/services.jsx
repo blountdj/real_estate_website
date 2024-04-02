@@ -9,6 +9,7 @@ const ServicesSection = () => {
         return (
             <ServiceBlock 
                 page="services" 
+                index={index}
                 title={item.title} 
                 text={item.text} 
                 side={index % 2 === 0? "l" : "r"}  

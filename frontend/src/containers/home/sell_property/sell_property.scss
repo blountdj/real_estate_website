@@ -12,6 +12,15 @@
         @include flex(column, flex-start, center, 20px);
         margin-left: 150px;
         width: 500px;
+        transition: all 1s ease-in-out;
+        opacity: 0;
+        transform: translateY(25%);
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
+
 
         &_h3 {
             @include font($font-family-asul,  700, 30px, 36px, left, white);

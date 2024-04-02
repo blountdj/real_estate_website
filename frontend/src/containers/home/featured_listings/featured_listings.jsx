@@ -1,13 +1,15 @@
 import React from "react";
 import PropertiesCarousel from '../../../components/propertiesCarousel/propertiesCarousel.jsx';
+import useScrollVisibility from '../../../utilities/useScrollVisibility';
 import "./featured_listings.scss";
 
 const featuredListings = () => {
   
+  const isVisible = useScrollVisibility('.featured_listings_container');
 
   return (
     <section className="featured_listings flex-center flex-center-column" id="featured_listings">
-      <div className="featured_listings_container flex-center flex-center-column">
+      <div className={`featured_listings_container ${isVisible ? 'visible' : ''}`}>
         <h2 className="featured_listings_h2">featured listings</h2>
         <p className="featured_listings_p">Our houses are synonymous of well-being, comfort, and quality of life. In our portfolio you
 will find luxury properties for sale and for rent in Valencia, with excellent locations, and with

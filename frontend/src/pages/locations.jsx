@@ -10,7 +10,7 @@ const Locations = () => {
 
 const locationsElem = locationsDict.map((location, index) => {
     return <ServiceBlock 
-            key={location.title} 
+            index={index} 
             page="locations" 
             title={location.title} 
             text={location.text} 

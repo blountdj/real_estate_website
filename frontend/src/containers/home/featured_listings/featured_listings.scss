@@ -8,8 +8,16 @@
     width: 100%;
 
     &_container {
-        gap: 40px;
         width: 60%;
+        @include flex(column, center, center, 40px);
+        transition: all 1s ease-in-out;
+        opacity: 0;
+        transform: translateY(25%);
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
     }
 
     &_h2 {

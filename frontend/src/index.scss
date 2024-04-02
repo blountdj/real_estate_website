@@ -89,3 +89,19 @@
 p {
   font-family: $font-family-rambla;
 }
+
+.notVisible {
+  transition: all 0.6s ease-in-out;
+  opacity: 0;
+  transform: translateY(15%);
+}
+
+.visible {
+  transition: all 0.6s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+button {
+  cursor: pointer;
+}

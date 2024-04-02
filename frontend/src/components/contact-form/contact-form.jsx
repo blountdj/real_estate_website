@@ -1,14 +1,17 @@
 import React from "react";
+import useScrollVisibility from '../../utilities/useScrollVisibility';
 import "./contact-form.scss";
 
 const ContactForm = () => {
+
+    const isVisible = useScrollVisibility(`.contact-form`);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
     }
 
   return (
-    <div className="contact-form" id="contact-form">
+    <div className={`contact-form ${isVisible ? 'visible' : 'notVisible'}`} id="contact-form">
 
         <div className="contact-form-container">
 

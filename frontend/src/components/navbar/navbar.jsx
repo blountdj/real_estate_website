@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import logoWhite from '../../assets/logos/logo.svg'
 import logoGrey from '../../assets/logos/logo_dark_grey.svg'
+import burgerBlack from '../../assets/icons/burger_black.svg'
+import burgerWhite from '../../assets/icons/burger_white.svg'
 import "./navbar.scss";
 
 const Navbar = ({ layout, scroll_threshold }) => {
@@ -29,8 +31,6 @@ const Navbar = ({ layout, scroll_threshold }) => {
       };
     }, []); // Only run the effect once on mount
   
-    // Define the navbar classes based on the scroll state
-    // const navbarClass = scrolled ? 'scrolled' : 'not_scrolled';
     let navbarClass;
 
     if (layout === "home") {
@@ -51,6 +51,7 @@ const Navbar = ({ layout, scroll_threshold }) => {
 
 
   return (
+    <>
     <div className={`${layout}_navbar navbar ${navbarClass}`} id="navbar">
         {logoElem}
         <div className="links">
@@ -65,7 +66,14 @@ const Navbar = ({ layout, scroll_threshold }) => {
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </div>
+        <div className="burger-menu" onClick={toggleMenu}>
+          <div className="burger-line"></div>
+          <div className="burger-line"></div>
+          <div className="burger-line"></div>
+        </div>
     </div>
+    <div className="nav_overlay" id="overlay"></div>
+    </>
   )
 };
 

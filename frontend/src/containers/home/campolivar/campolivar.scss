@@ -3,7 +3,7 @@
 
 .campolivar {
     @include backgroundImage('campolivar.jpg');
-    @include flex(row, center, space-between, 52px);
+    @include flex(column, flex-start, center, 52px);
     // @include overlay($linear-gradient-to-right-02-01);
     height: 600px;
     position: relative;
@@ -27,6 +27,14 @@
         z-index: 1;
         position: relative;
         padding-left: 150px;
+        transition: all 1s ease-in-out;
+        opacity: 0;
+        transform: translateY(25%);
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
     }
 
     &_h2 {
@@ -46,6 +54,15 @@
         background-color: transparent;
         border: 1px solid white;
         width: fit-content;
+        margin-left: 150px;
+        transition: all 1s ease-in-out;
+        opacity: 0;
+        transform: translateY(25%);
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
 
         &:hover {
             background-color: white;

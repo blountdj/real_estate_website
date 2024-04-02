@@ -33,5 +33,52 @@
         border: 1px solid white;
         text-transform: uppercase;
         border-radius: 2px;
+        transition: all 0.4s ease-in-out;
+        
+        &:hover {
+            background-color: white;
+            color: black;
+
+        }
+    }
+}
+
+.services_serviceBlock {
+
+    &_text {
+        @include flex(row, flex-start, center, 28px);
+        padding-left: 8%;
+
+        &.r {
+           @include flex(column, flex-end, center, 28px); 
+           padding-right: 8%;
+
+           & > h3 {
+            text-align: right;
+           }
+
+           & > p {
+            text-align: right;
+           }
+        }
+
+        &_h3.r {
+            text-align: right;
+        }
+    }
+
+    &_button {
+    text-transform: uppercase;
+    padding: 16px 32px;
+    width: fit-content;
+    background-color: transparent;
+    color: $color-nearly_black;
+    border: solid 1px $color-nearly_black;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+        background-color: $color-nearly_black;
+        color: white;
+    }
     }
 }

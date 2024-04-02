@@ -3,9 +3,13 @@ import ContactForm from '../components/contact-form/contact-form';
 import Consultant from '../components/consultant/consultant';
 import consultantsDict from '../data/consultantsDict';
 import Navbar from '../components/navbar/navbar';
+import useScrollVisibility from '../utilities/useScrollVisibility';
 import './who-we-are.scss'
 
 const WhoAreWe = () => {
+
+    const isVisibleText = useScrollVisibility(`.whoWeAre_text`);
+    const isVisibleConsultants = useScrollVisibility(`.whoWeAre_consultants`);
 
     const consultantsArray = Object.values(consultantsDict);
     const consultants = consultantsArray.map(consultant => (
@@ -15,9 +19,9 @@ const WhoAreWe = () => {
     return (
         <>
             <Navbar layout="home" scroll_threshold="100" />
-            <BackgroundHeader section="who-we-are" h1_type="_2" h1="we're monserrate, valencia's premium independent estate agency"/>
+            <BackgroundHeader page="who_we_are" section="who-we-are" h1_type="_2" h1="we're monserrate, valencia's premium independent estate agency"/>
 
-            <div className="whoWeAre_text">
+            <div className={`whoWeAre_text ${isVisibleText ? 'visible' : 'notVisible'}`}>
                 <div className="whoWeAre_text_container">
                     <p className="whoWeAre_text_p">We love our city. We believe in it. We believe it is one of the best cities in the world to live in. And we are its best ambassadors.</p>
                     <p className="whoWeAre_text_p">We are an agency of people, personalised services and long-term relationships. Our main assets are our leading way to communicate, our valuation capacity, and our strategical vision. We are a team of experts providing a premium service through our passion and attention to every detail. Monserrate means safe, visionary and global real estate consultants in a privileged region: Valencia.</p>
@@ -25,7 +29,7 @@ const WhoAreWe = () => {
                 </div>
             </div>
 
-            <div className="whoWeAre_consultants">
+            <div className={`whoWeAre_consultants ${isVisibleConsultants ? 'visible' : 'notVisible'}`}>
                 
                 <div className="whoWeAre_consultants_container">
                     {consultants}
