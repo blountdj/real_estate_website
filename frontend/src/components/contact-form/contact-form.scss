@@ -59,10 +59,17 @@
         &-button {
             @include flex(column, center, center, 0px);
             background-color: $color-background-medium-grey;
-            border: 1px solid black;
+            border: 1px solid $color-nearly_black;
             text-transform: uppercase;
             @include font($font-family-rambla, 600, 16px, 16px, center, white);
             width: 100%;
+            padding: 16px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: white;
+                color: $color-nearly_black;
+            }
         }
     
     }

@@ -1,10 +1,6 @@
 import BackgroundHeader from '../components/background-header/background-header'
 import ContactForm from '../components/contact-form/contact-form'
 import ServiceBlock from '../components/service_block/service_block'
-// import alfinach from '../assets/locations/alfinach2.jpg'
-// import los_monasterios from '../assets/locations/los_monasterios2.jpg'
-// import monte_picayo from '../assets/locations/monte_picayo2.jpg'
-// import valencia from '../assets/locations/valencia2.jpg'
 import Navbar from '../components/navbar/navbar'
 import locationsDict from '../data/locationsDict'
 import './locations.scss'
@@ -28,13 +24,13 @@ const locationsElem = locationsDict.map((location, index) => {
 
     return (
         <>
-            <Navbar layout="home" scroll_threshold="120" />
+            <Navbar layout="home" scroll_threshold="50" />
             <BackgroundHeader section="locations" h1_type="_1" h1="we focus on prime locations"/>
             <div className="locations_section">
                 {locationsElem}
             </div>
             <div className="locations_page_properties">
-                <button className="locations_page_properties_button">sell all properties</button>
+                <button className="locations_page_properties_button" onClick={() => window.location.href = '/properties'}>sell all properties</button>
             </div>
             <ContactForm />
         </>

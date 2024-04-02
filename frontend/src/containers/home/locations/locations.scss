@@ -9,7 +9,7 @@
     gap: 40px;
 
     &_top {
-        @include flex(column, center, center, 36px);
+        // @include flex(column, center, center, 36px);
         width: 60%;
 
         &_h2 {
@@ -31,35 +31,92 @@
         width: 90%;
         flex-shrink: 0;
         overflow-x: hidden;
+        overflow-y: hidden;
     }
 
-    &_img {
-        width: 100%;
+    &_element {
+        // position: relative;
         height: 500px;
-        object-fit: cover;
+        overflow: hidden;
 
-        &s_row {
-            position: relative;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        &_text {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: white;
-        }
-
-        &_container {
+        &_img_container {
             width: 150px;   
             position: relative;
             width: 100%;
+            @include flex(column, center, center, 0px);
     
             &::before {
                 @include overlay($linear-gradient-to-bottom-00-07); 
             }
+
+            &_img {
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+        
+                &s_row {
+                    position: relative;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+        
+            }
+        }
+
+        &_text_container {
+            top: 0; 
+            transform: translateY(-80px);
+            @include flex(column, center, center, 0px);
+            
+            &_h3_container {
+                height:80px;
+                @include flex(column, center, flex-start, 0px);
+            }
+
+
+            &_text {
+                @include font($font-family-asul, 700, 30px, 36px, center, white);
+                color: white;
+            }
+
+            &_button {
+                @include font($font-family-rambla, 400, 16px, 16px, center, transparent);
+                padding: 8px 16px;
+                cursor: none; 
+                border: none;
+                background: transparent;
+                
+            }
+        }
+
+        &:hover .locations_element_text_container {
+            transform: translateY(-200px);
+            transition: all 0.6s ease-in-out;
+        }
+
+        &:not(:hover) .locations_element_text_container {
+            transition: all 0.6s ease-in-out;
+        }
+
+        &:hover .locations_element_text_container_button {
+            color: white;
+            cursor: pointer; 
+            border: 1px solid white;
+            transition: all 0.6s ease-in-out;
+
+            &:hover {
+                background-color: white;
+                color: black;
+                transition: all 0.4s ease;
+            }
+    
+            &:not(:hover) {
+                transition: all 0.4s ease;
+            }
+        }
+
+        &:not(:hover) .locations_element_text_container_button {
+            transition: all 0.6s ease-in-out;
         }
     }
 }

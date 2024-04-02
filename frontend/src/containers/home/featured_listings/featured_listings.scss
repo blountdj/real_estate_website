@@ -38,15 +38,11 @@
             background-color: white;
             color: black;
             border: 1px solid black;
+            transition: all 0.4s ease;
 
             &:hover {
                 background-color: black;
                 color: white;
-                transition: all 0.4s ease;
-            }
-
-            &:not(:hover) {
-                transition: all 0.4s ease;
             }
         }
     }

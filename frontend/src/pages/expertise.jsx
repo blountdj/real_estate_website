@@ -18,6 +18,7 @@ const Expertise = () => {
                            "With our improvement plan, we assess your property and provide a range of options for getting a return on your asset and increasing its value."]}
                 button="true"
                 button_text="contact us"
+                button_link="/contact"
             />
             <BackgroundHeader section="expertise2" h1_type="_1" h1="services for visitors"/>
             <Info 
@@ -27,6 +28,7 @@ const Expertise = () => {
                         "If you have come to live in Valencia, we help you feel at home. We handle all the paperwork. We tell you what you need to do to get your identity documents and council registration certificate. We try to make life easier and take the stress out of your move. We also enrol your children in the best schools and find a personal cleaning service and any other services you may need."]}
                 button="true"
                 button_text="contact us"
+                button_link="/contact"
             />
             <ContactForm />
         </>

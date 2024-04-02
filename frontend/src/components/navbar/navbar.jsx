@@ -58,7 +58,7 @@ const Navbar = ({ layout, scroll_threshold }) => {
                 <li><a href="/properties">Buy</a></li>
                 <li><a href="/properties">Rent</a></li>
                 <li><a href="/services">Services</a></li>
-                <li><a href="/who_are_we">Who we are</a></li>
+                <li><a href="/who_we_are">Who we are</a></li>
                 <li><a href="/expertise">Expertise</a></li>
                 <li><a href="/locations">Locations</a></li>
                 <li><a href="/blog">Blog</a></li>

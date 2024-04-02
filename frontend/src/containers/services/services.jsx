@@ -5,7 +5,6 @@ import servicesPageDict from '../../data/servicesPageDict';
 
 const ServicesSection = () => {
 
-
     const services = servicesPageDict.map((item, index) => {
         return (
             <ServiceBlock 
@@ -20,22 +19,10 @@ const ServicesSection = () => {
         )
     })
 
-
     return (
         <>
             <div className="services_section">
-                {/* <ServiceBlock 
-                    page="services" 
-                    title="real estate" 
-                    text="The purchase and sale of premium real estate, advice, free valuation of your property and return on investment proposal." 
-                    side="l" 
-                    button="false" 
-                    button_text="i'm interested"
-                    image={real_estate} 
-                    alt="real estate image"/> */}
-
                 {services}
-
             </div>
         </>
     )

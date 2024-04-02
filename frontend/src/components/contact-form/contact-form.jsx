@@ -31,11 +31,11 @@ const ContactForm = () => {
                 <div className="contact-form-form-privacy">
                     <input className="contact-form-form-privacy-checkbox" type="checkbox" id="myCheckbox" name="myCheckbox" />
                     <label className="contact-form-form-privacy-label" htmlFor="myCheckbox">I have read and accept the  
-                        <span className="contact-form-form-privacy-span"><a href="privacy_policy"> Privacy policy</a></span>
+                        <span className="contact-form-form-privacy-span"><a href="/privacy_policy"> Privacy policy</a></span>
                     </label>
                 </div>
 
-                <button className="contact-form-form-button flex-center"type="submit">
+                <button className="contact-form-form-button"type="submit">
                     <div className="filter_search_text">send</div>
                 </button>
 

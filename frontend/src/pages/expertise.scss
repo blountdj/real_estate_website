@@ -40,5 +40,11 @@
         border: 1px solid $color-text-heading-grey;
         text-transform: uppercase;
         border-radius: 2px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $color-text-heading-grey;
+            color: white;
+        }
     }
 }

@@ -5,13 +5,19 @@
     @include flex(row, center, space-between, 0px);
     font-family: $font-family-rambla;
     width: 100%;
-    z-index: 10;
-    position: relative;
+    height: 100px;
     padding-top: 28px;
-    position: sticky;
-    top: 0px;
+    position: fixed;
     z-index: 9998;
-}
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar.scrolled {
+    background-color: white;
+    color: $color-text-heading-grey;
+  }
+    
 
 .home_navbar,
 .contact_navbar {
@@ -33,21 +39,12 @@
 .links_ul li {
     cursor: pointer;
     margin-left: 32px;
-}
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
 
 
-div.scrolled {
-    background-color: white;
-    color: $color-text-heading-grey;
-    // background-color: yellow;
-}
-
-div.not_scrolled {
-    // background-color: green;
-    // position: absolute;
-    height: 0;
-    padding-top: 0px;
-    transform: translateY(60px);
-    color: white;
 }
 

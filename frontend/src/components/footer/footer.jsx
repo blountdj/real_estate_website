@@ -10,20 +10,20 @@ import FooterLinks from "../../components/footer_links/footer_links";
 const Footer = () => {
 
   const company_links = [
-    {"text": "about us", "href": "#"},
-    {"text": "terms of use", "href": "#"},
-    {"text": "privacy", "href": "#"},
-    {"text": "cookies", "href": "#"},
+    {"text": "about us", "href": "/who_we_are"},
+    {"text": "terms of use", "href": "/conditions"},
+    {"text": "privacy", "href": "/privacy_policy"},
+    {"text": "cookies", "href": "/cookies_policy"},
   ]
   const services_links = [
-    {"text": "our services", "href": "#"},
-    {"text": "owners and tenants", "href": "#"},
+    {"text": "our services", "href": "/services"},
+    {"text": "owners and tenants", "href": "/expertise"},
   ]
   const other_properties_links = [
-    {"text": "plots", "href": "#"},
-    {"text": "offices", "href": "#"},
-    {"text": "locals", "href": "#"},
-    {"text": "investments", "href": "#"},
+    {"text": "plots", "href": "/properties"},
+    {"text": "offices", "href": "/properties"},
+    {"text": "locals", "href": "/properties"},
+    {"text": "investments", "href": "/properties"},
   ]
   const locations_links = [
     {"text": "luxery homes in valencia", "href": "#"},

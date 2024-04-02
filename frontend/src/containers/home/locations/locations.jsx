@@ -21,10 +21,19 @@ const Locations = () => {
   ]
 
   const locationsElements = locations.map(location => (
-      <div key={location.title} className="locations_img_container">
-          <img className="locations_img" src={location.img} alt={location.title} />
-          <h3 className="locations_img_text">{location.title}</h3>
-    </div>
+      <div key={location.title} className="locations_element">
+
+        <div className="locations_element_img_container">
+          <img className="locations_element_img_container_img" src={location.img} alt={location.title} />
+        </div>
+   
+        <div className="locations_element_text_container">
+          <div className="locations_element_text_container_h3_container">
+            <h3 className="locations_element_text_container_text">{location.title}</h3>
+          </div>
+          <button className="locations_element_text_container_button" onClick={() => window.location.href = '/properties'}>SEE PROPERTIES</button>
+        </div>
+      </div>
 ));
 
   return (

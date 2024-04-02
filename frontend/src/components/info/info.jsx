@@ -1,10 +1,10 @@
 
 import './info.scss'
 
-const Info = ({ page, header, textList, button, button_text }) => {
+const Info = ({ page, header, textList, button, button_text, button_link }) => {
 
     const buttonElem = button === "true" 
-        ? <button className={`${page}_info_button`}>{button_text}</button>
+        ? <button className={`${page}_info_button`} onClick={() => window.location.href = button_link}>{button_text}</button>
         : ""
 
     const textElem = textList.map(text => {

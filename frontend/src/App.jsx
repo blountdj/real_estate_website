@@ -36,7 +36,7 @@ function App() {
             <ServicesPage />
           </LayoutFull>}/>
 
-          <Route path="/who_are_We" element={<LayoutFull>
+          <Route path="/who_we_are" element={<LayoutFull>
             <WhoAreWe />
           </LayoutFull>}/>
 
