@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import Carousel from '../../../components/carousel/carousel.jsx';
+import PropertiesCarousel from '../../../components/propertiesCarousel/propertiesCarousel.jsx';
 import "./featured_listings.scss";
 
 const featuredListings = () => {
   
+
   return (
     <section className="featured_listings flex-center flex-center-column" id="featured_listings">
       <div className="featured_listings_container flex-center flex-center-column">
@@ -18,7 +18,7 @@ designs and services that make them truly unique and special.</p>
           <button className="featured_listings_button white">Rent</button>
         </div>
       </div>
-      <Carousel />
+      <PropertiesCarousel page="home" />
       <button className="featured_listings_button white" onClick={() => window.location.href = '/properties'}>SEE ALL PROPERTIES</button>
 
     </section>

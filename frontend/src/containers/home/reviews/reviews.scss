@@ -22,8 +22,7 @@
     }
 
     &_carousel {
-        @include flex(row, center, space-between, 12px);
-        gap: 12px;
+        @include flex(row, center, space-between, 0.5%);
         width: 85%;
 
         &_items {
@@ -42,7 +41,7 @@
     &_review {
         background-color: $color-review-background;
         padding: 24px;
-        width: 30%;
+        width: 32%;
         flex-shrink: 0;
         transition: transform 0.2s ease-in-out;
 

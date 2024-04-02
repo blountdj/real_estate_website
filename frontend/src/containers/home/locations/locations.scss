@@ -22,12 +22,9 @@
         }
     }
 
-    &_controllers {
-        width: 5%;
-    }
 
     &_elements {
-        @include flex(row, flex-start, flex-start, 1%);
+        @include flex(row, flex-start, flex-start, 0px);
         width: 90%;
         flex-shrink: 0;
         overflow-x: hidden;
@@ -38,6 +35,9 @@
         // position: relative;
         height: 500px;
         overflow: hidden;
+        width: 24%;
+        flex-shrink: 0;
+        transition: all 0.3s ease-in-out;
 
         &_img_container {
             width: 150px;   

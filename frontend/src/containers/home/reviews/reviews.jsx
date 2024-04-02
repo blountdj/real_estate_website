@@ -1,15 +1,17 @@
 import React from "react";
+import ReviewsCarousel from "../../../components/reviewsCarousel/reviewsCarousel";
+import reviewsData from '../../../data/reviewsDict';
 import star_yellow from '../../../assets/icons/star_yellow.svg';
 import star_grey from '../../../assets/icons/star_grey.svg';
-import reviewsData from "../../../data/reviewsDict";
 import "./reviews.scss";
+import "react-alice-carousel/lib/scss/alice-carousel.scss";
 
 
 const Reviews = () => {
 
   const avatarColors = ['#ff5733', '#4997a8', '#5733ff', '##4488d1', '#7e57c2', '#cabe18']; // List of available colors
-  
-  const reviewItems = reviewsData.map(review => {
+
+  const reviewItems = reviewsData.map((review, index) => {
 
     let starsElem = [];
     for (let i = 0; i < review.stars; i++) {
@@ -47,21 +49,20 @@ const Reviews = () => {
     </div>
   )})
 
+
   return (
     <section className="reviews" id="reviews">
+
         <h2 className="reviews_h2">reviews</h2>
+
         <div className="reviews_container">
           <p className="reviews_p">Are you thinking of selling, buying, or renting an apartment in Valencia? </p>
           <p className="reviews_p">Monserrate can be your best ally to cover your needs.</p>
           <p className="reviews_p">These are the opinions of our customers.</p>
         </div>
-        <div className="reviews_carousel flex-center">
-          <div className="reviews_carousel_arrow flex-center">{"<"}</div>
-          <div className="reviews_carousel_items">
-            {reviewItems}
-          </div>
-          <div className="reviews_carousel_arrow flex-center">{">"}</div>
-        </div>
+        
+        <ReviewsCarousel page="home" />
+
     </section>
   )
 };
