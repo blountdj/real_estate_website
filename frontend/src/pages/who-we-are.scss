@@ -53,6 +53,20 @@
     }
 }
 
-// .who_we_are_background_header_text_h1 {
+@media screen and (max-width: 1100px) {
+    .whoWeAre_text_container {
+        width: 80%;
+    }
+}
 
-// }
+@media screen and (max-width: 1000px) {
+    .whoWeAre_consultants_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .whoWeAre_text_container {
+        width: 100%;
+    }
+}

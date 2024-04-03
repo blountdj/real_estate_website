@@ -9,6 +9,9 @@
     top: 95px;
     z-index: 9998;
     // padding-top: 80px;
+    &.hide-filter {
+        display: none;
+    }
 }
 
 .properties_filter {
@@ -25,7 +28,6 @@
     padding-top: 40px;
     padding-bottom: 20px;
     // box-shadow: $box-shadow-01;
-
 
     &_label {
         padding-bottom: 16px;

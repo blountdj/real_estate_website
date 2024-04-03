@@ -9,6 +9,7 @@
     justify-content: center;
     padding-top: 40px;
     padding-bottom: 40px;
+    margin-top: 80px;
 
 }
 
@@ -18,6 +19,7 @@
     background-color: white; 
     box-shadow: $box-shadow-01;
     width: 100%;
+    // margin-top: 40px;
     }
 
     &_img_container {
@@ -44,3 +46,21 @@ div.middle_line {
     text-transform: capitalize;
 }
 
+@media screen and (max-width: 1200px) {
+    .properties_list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .properties_list {
+        grid-template-columns: 1fr;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .properties_list {
+        width: 80%;
+    }
+}

@@ -74,5 +74,33 @@
         }
     
     }
+}
 
+@media screen and (max-width: 1100px) {
+    .contact-form-container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contact-form-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .contact-form-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .contact-form {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .contact-form-container {
+        width: 100%;
+    }
 }

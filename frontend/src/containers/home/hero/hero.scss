@@ -39,7 +39,7 @@
         &_p {
             font-size: 24px;
             text-align: center;
-            width: 800px;
+            width: 50%;
         }
     }
 }
@@ -84,17 +84,21 @@
     }
   }
 
-//   .test_container {
-//     height: 100vh;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     background-color: lightgray;
-//     transition: opacity 0.5s, transform 0.5s;
-//     opacity: 0;
-//     transform: translateY(50%);
-//   }
-  
+
+  @media screen and (max-width: 950px) {
+    .hero_section_text_p {
+        width: 80%;
+    }
+    .hero_section {
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hero_section {
+        height: 600px;
+    }
+}
   
 
   

@@ -1,12 +1,15 @@
 @import "../../../variables";
 @import "../../../mixins";
 
+.services {
+    background-color: $color-background-grey;
 
-.services_h2 {
-    @include font($font-family-asul, 700, 21px, 25px, left, #333);
-    text-transform: uppercase;
-    padding-top: 80px;
-    padding-bottom: 60px;
+    &_h2 {
+        @include font($font-family-asul, 700, 21px, 25px, left, #333);
+        text-transform: uppercase;
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
 }
 
 .home_serviceBlock {
@@ -17,15 +20,17 @@
     margin-bottom: 16px;
 
     &_text {
-        display: flex;
-        justify-content: center;
+        @include flex(column, flex-start, center, 16px);
         padding-left: 50px;
         padding-right: 50px;
-        gap: 16px;
         width: 50%;
 
         &.l {
             background-color: #585f68;
+        }
+
+        &.r {
+            background-color: $color-text-white;
         }
 
         &_h3 {
@@ -112,3 +117,30 @@
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .home_serviceBlock {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .home_serviceBlock {
+        height: auto;
+
+        &_text {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            width: 100%;
+        }
+
+        &_image {
+            width: 100%;
+        }
+
+        &.l, &.r {
+            width: 80%;
+            flex-direction: column-reverse;
+            margin-bottom: 40px;
+        }
+    }
+}

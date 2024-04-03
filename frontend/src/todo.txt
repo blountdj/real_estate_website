@@ -1,11 +1,8 @@
-- create photo slide show
 - create all photos page
 - sticky contact button
-- add hovers etc inc on social icons
 - create components
-- create carousels
-- create animations
 - make responsive
+- smaller size images for smaller devices
 - create other pages
 - fix filter styling
 - page not found

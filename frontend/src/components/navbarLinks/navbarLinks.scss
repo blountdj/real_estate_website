@@ -1,0 +1,41 @@
+@import "../../variables";
+@import "../../mixins";
+
+ 
+.navbarlinks {
+
+    &_ul {
+        display: flex;
+        font-size: 16px;
+    }
+
+    &_ul li {
+        cursor: pointer;
+        margin-left: 32px;
+        transition: all 0.2s ease-in-out;
+    
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+}
+
+.main_navbarlinks {
+    // color: yellowgreen;
+}
+
+.overlay_navbarlinks {
+    color: $color-text-heading-grey;
+    padding-top: 40px;
+
+    &_ul {
+        @include flex(column, center, center, 32px);
+    }
+    
+}
+
+
+
+
+
+

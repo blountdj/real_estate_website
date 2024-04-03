@@ -35,11 +35,12 @@
     // margin-bottom: 16px;
 
     &_text {
-        display: flex;
-        justify-content: center;
+        // display: flex;
+        // justify-content: center;
+        @include flex(column, flex-start, center, 16px);
         padding-left: 50px;
         padding-right: 50px;
-        gap: 16px;
+        // gap: 16px;
         width: 40%;
 
         &_h3 {
@@ -86,6 +87,85 @@
             background-color: $color-background-medium-grey;
             color: white;
             border: solid 1px $color-background-medium-grey;
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .locations_serviceBlock_text_p {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .locations_serviceBlock {
+        height: 500px;
+    }
+
+    .locations_serviceBlock_text {
+
+        padding-left: 25px;
+        padding-right: 25px;
+
+        &_p {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .locations_serviceBlock {
+        height: fit-content;
+        margin-top: 40px;
+        width: 85%;
+
+        &.l, &.r {
+            @include flex(column, center, center, 16px);
+            width: 100%;
+        }
+
+        &_text {
+            width: 100%;
+            height: fit-content;
+            align-items: center;
+
+            &_h3.l {
+                text-align: center;
+            }
+
+            &_p {
+                text-align: center;
+                width: 85%;
+            }
+        }
+
+        &_text.l {
+            width: 100%;
+            height: fit-content;
+        }
+
+        &_image {
+            width: 85%;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+.locations_serviceBlock {
+        width: 85%;
+
+        &_text {
+            &_p {
+                width: 98%;
+            }
+        }
+
+        &_text.l {
+            width: 100%;
+        }
+
+        &_image {
+            width: 100%;
         }
     }
 }

@@ -9,8 +9,7 @@
     // margin-bottom: 16px;
 
     &_text {
-        display: flex;
-        justify-content: center;
+        @include flex(column, center, center, 0px);
         padding-left: 50px;
         padding-right: 50px;
         gap: 16px;
@@ -47,3 +46,4 @@
         flex-direction: row-reverse;
     }
 }
+

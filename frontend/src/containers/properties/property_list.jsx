@@ -16,7 +16,6 @@ const PropertyList = () => {
     return (
         <div className="properties_list">
             {properties}
-            property list
         </div>
     )
 }

@@ -3,12 +3,18 @@ import logoWhite from '../../assets/logos/logo.svg'
 import logoGrey from '../../assets/logos/logo_dark_grey.svg'
 import burgerBlack from '../../assets/icons/burger_black.svg'
 import burgerWhite from '../../assets/icons/burger_white.svg'
+import closeIcon from '../../assets/icons/close.svg'
+import NavbarLinks from '../navbarLinks/navbarLinks';
+import { useSharedState } from '../../utilities/SharedStateContext';
 import "./navbar.scss";
 
 const Navbar = ({ layout, scroll_threshold }) => {
 
+    const { isMenuOpen, setIsMenuOpen } = useSharedState();
+
     const [scrolled, setScrolled] = useState(false);
     let logoElem;
+    let burgerElem;
 
     useEffect(() => {
       const handleScroll = () => {
@@ -37,42 +43,52 @@ const Navbar = ({ layout, scroll_threshold }) => {
       logoElem = scrolled 
       ? <a href="/"><img className="logo" src={logoGrey} alt="logo" /></a> 
       : <a href="/"><img className="logo" src={logoWhite} alt="logo" /></a>
+
+      burgerElem = scrolled 
+      ? burgerBlack 
+      : burgerWhite
+
       navbarClass = scrolled ? 'scrolled' : 'not_scrolled';
     } else if (layout === "contact") {
       logoElem = <a href="/"><img className="logo" src={logoGrey} alt="logo" /></a> 
+      burgerElem = burgerBlack 
       navbarClass = 'scrolled';
     }else {
       logoElem = scrolled 
       ? <a href="/"><img className="logo" src={logoWhite} alt="logo" /></a> 
       : <a href="/"><img className="logo" src={logoGrey} alt="logo" /></a>
+
+      burgerElem = scrolled 
+      ? burgerWhite
+      : burgerBlack
+
       navbarClass = scrolled ? 'scrolled' : 'not_scrolled';
     }
  
+    const toggleMenu = () => {
+      setIsMenuOpen(!isMenuOpen);
 
+      const overlay = document.getElementById('nav_overlay');
+      overlay.classList.toggle('overlay-visible');
+  };
+  
 
   return (
     <>
     <div className={`${layout}_navbar navbar ${navbarClass}`} id="navbar">
         {logoElem}
-        <div className="links">
-            <ul className="links_ul">
-                <li><a href="/properties">Buy</a></li>
-                <li><a href="/properties">Rent</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/who_we_are">Who we are</a></li>
-                <li><a href="/expertise">Expertise</a></li>
-                <li><a href="/locations">Locations</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </div>
+        <NavbarLinks type="main" />
         <div className="burger-menu" onClick={toggleMenu}>
-          <div className="burger-line"></div>
-          <div className="burger-line"></div>
-          <div className="burger-line"></div>
+          <img src={burgerElem} />
+        </div>
+        <div className="nav_overlay" id="nav_overlay">
+            <div className="nav_overlay_top">
+              <img className="logo" src={logoGrey} alt="logo" />
+              <img className="close_icon" src={closeIcon} alt="close icon" onClick={toggleMenu} />
+            </div>
+            <NavbarLinks type="overlay" />
         </div>
     </div>
-    <div className="nav_overlay" id="overlay"></div>
     </>
   )
 };

@@ -48,3 +48,39 @@
         }
     }
 }
+
+@media screen and (max-width: 900px) {
+    .expertise_info  {
+        width: 100%;
+        align-items: center;
+
+        &_container {
+            width: 90%;
+        }
+
+        &_p {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .expertise_info  {
+        width: 100%;
+        align-items: center;
+        padding-left: 0px;
+        padding-right: 0px;
+
+        // &_container {
+        //     width: 95%;
+        // }
+        
+        &_h2 {
+            width: 90%;
+        }
+    }
+
+    .background_header.expertise2 {
+        height: 400px;
+    }
+}

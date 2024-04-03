@@ -12,7 +12,7 @@ const ServiceBlock = ({ page, index, title, text, side, button, button_text, ima
   return (
     <div className={`${page}_serviceBlock ${page}_serviceBlock_${index} ${side} ${isVisible ? 'visible' : 'notVisible'}`} id="serviceBlock">
 
-      <div className={`${page}_serviceBlock_text flex-column ${side}`}>
+      <div className={`${page}_serviceBlock_text ${side}`}>
         <div className={`${page}_serviceBlock_text_holder`}>
           <h3 className={`${page}_serviceBlock_text_h3 ${side}`}>{title}</h3>
         </div>

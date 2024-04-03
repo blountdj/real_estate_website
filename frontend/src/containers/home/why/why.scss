@@ -77,3 +77,37 @@
     }
 }
 
+@media screen and (max-width: 1400px) {
+    .why_components {
+        grid-gap: 20px;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .why_text {
+        width: 60%;
+    }
+    .why_components {
+        grid-template-columns: 1fr;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .why_text {
+        width: 80%;
+    }
+    .why_components {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .why_text {
+        width: 90%;
+    }
+    .why_components {
+        width: 90%;
+    }
+}

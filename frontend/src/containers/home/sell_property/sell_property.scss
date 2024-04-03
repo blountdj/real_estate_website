@@ -54,3 +54,18 @@
 }
 
 
+@media screen and (max-width: 1000px) {
+    .sell_property_container {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sell_property_container {
+        margin-left: 60px;
+        
+    }
+    .sell_property {
+        height: 400px;
+    }
+}

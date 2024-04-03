@@ -6,3 +6,10 @@ div.layout_main {
     padding-right: 40px;
     width: 100%;
 }
+
+@media screen and (max-width: 650px) {
+    div.layout_main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
