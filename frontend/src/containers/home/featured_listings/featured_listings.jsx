@@ -3,9 +3,22 @@ import PropertiesCarousel from '../../../components/propertiesCarousel/propertie
 import useScrollVisibility from '../../../utilities/useScrollVisibility';
 import "./featured_listings.scss";
 
+import propertyDict from "../../../data/propertyDict.jsx";
+import PropertyBlock from "../../../components/property_block/property_block.jsx";
+import EmblaCarousel from "../../../components/EmblaCarousel/EmblaCarousel.jsx";
+
 const featuredListings = () => {
   
   const isVisible = useScrollVisibility('.featured_listings_container');
+
+
+  const propertyArray = Object.entries(propertyDict);
+  const carouselElements = propertyArray.map(([key, value], index) =>  (
+              <PropertyBlock index={index} page={'home'} property={value} currentImageIndex={index}  />
+  )
+  )
+
+  const OPTIONS = {'align': 'start'}
 
   return (
     <section className="featured_listings flex-center flex-center-column" id="featured_listings">
@@ -22,6 +35,8 @@ designs and services that make them truly unique and special.</p>
       </div>
       <PropertiesCarousel page="home" />
       <button className="featured_listings_button white" onClick={() => window.location.href = '/properties'}>SEE ALL PROPERTIES</button>
+      Embla Carousel:
+      <EmblaCarousel options={OPTIONS} elements={carouselElements} />
 
     </section>
   )

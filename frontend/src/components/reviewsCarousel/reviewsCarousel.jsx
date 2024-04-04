@@ -35,13 +35,44 @@ const ReviewsCarousel = ({page}) => {
       };
     }, []);
 
+    const dp = 0;
 
-    const carouselWidth = (screenWidth * 0.85) * 0.90;
-    const gap = carouselWidth * 0.02;
-    const elemPX = carouselWidth * 0.32;
+    let carouselWidth;
+    let gap;
+    let elemWidth;
+    let rightArrowVar;
+    if (screenWidth <= 600 ) {
+      carouselWidth = +(screenWidth * 0.90).toFixed(dp);
+      elemWidth = +carouselWidth.toFixed(dp);
+      gap = +(carouselWidth * 0.02).toFixed(dp);
+      rightArrowVar = 1;
+    } else if (screenWidth <= 900) {
+      carouselWidth = +(screenWidth * 0.90).toFixed(dp);
+      elemWidth = +(carouselWidth * 0.49).toFixed(dp);
+      gap = +(carouselWidth * 0.02).toFixed(dp);
+      rightArrowVar = 2;
+    } else if (screenWidth <= 1200) {
+      carouselWidth = +((screenWidth * 0.90) * 0.85).toFixed(dp);
+      elemWidth = +(carouselWidth * 0.49).toFixed(dp);
+      gap = +(carouselWidth.toFixed(dp) * 0.02);
+      rightArrowVar = 2;
+    } else {
+      carouselWidth = +(+(screenWidth * 0.90).toFixed(dp) * 0.85).toFixed(dp);
+      elemWidth = +(carouselWidth * 0.32).toFixed(dp);
+      gap = +(carouselWidth * 0.02).toFixed(dp);
+      rightArrowVar = 3;
+    }
 
-    const translateValue = `translateX(calc(${-currentImageIndex} * ${elemPX + gap}px))`;
+    console.log('carouselWidth:', carouselWidth)
+    console.log('elemWidth:', elemWidth)
+    console.log('gap:', gap)
+    console.log('elemWidth + gap:', elemWidth + gap)
+    console.log('(elemWidth + gap).toFixed(dp):', (3.5555 + 50.99531).toFixed(2))
+
+    const translateValue = `translateX(calc(${-currentImageIndex} * ${(elemWidth + gap)}px))`;
     
+    console.log('translateValue:', translateValue)
+
     const carouselElements = reviewsData.map((review, index) => {
 
       let starsElem = [];
@@ -84,7 +115,7 @@ const ReviewsCarousel = ({page}) => {
     ? <img className="reviews_carousel_controller_arrow" src={controller_left} onClick={handlePrev} alt="left arrow" /> 
     : "";
 
-  const right_arrow = currentImageIndex + 3 !== carouselElements.length 
+  const right_arrow = currentImageIndex + rightArrowVar !== carouselElements.length 
     ? <img className="reviews_carousel_controller_arrow" src={controller_right} onClick={handleNext} alt="right arrow" />
     : "";
 

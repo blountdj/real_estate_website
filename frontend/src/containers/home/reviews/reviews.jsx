@@ -3,9 +3,10 @@ import ReviewsCarousel from "../../../components/reviewsCarousel/reviewsCarousel
 import useScrollVisibility from '../../../utilities/useScrollVisibility';
 import "./reviews.scss";
 
+
 const Reviews = () => {
 
-  const isVisible = useScrollVisibility('.reviews');
+    const isVisible = useScrollVisibility('.reviews');
 
   return (
     <section className={`reviews ${isVisible ? 'visible' : ''}`} id="reviews">

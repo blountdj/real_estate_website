@@ -18,15 +18,33 @@ const PropertyBlock = ({ index, page, property, currentImageIndex }) => {
       };
     }, []);
 
-    const gap = 12;
+    // console.log('screenWidth:', screenWidth)
     const carouselWidth = screenWidth * 0.90;
-    const translateValue = `translateX(calc(${-currentImageIndex} * ${(carouselWidth / 3) + (gap / 2)}px))`;
-    
+    // console.log('carouselWidth:', carouselWidth)
+
+    let gap = carouselWidth * 0.0125;
+    // console.log('gap:', gap)
+
+    let elemWidth;
+    if (screenWidth >= 700 ) {
+      elemWidth = carouselWidth * 0.5;
+    } else if (screenWidth >= 1000) {
+      elemWidth = carouselWidth * 0.325;
+    } else {
+      elemWidth = carouselWidth;
+      // gap = 0;
+    }
+    // console.log('elemWidth:', elemWidth) 
+
+    // const translateValue = `translateX(calc(${-currentImageIndex} * ${(elemWidth + gap)}px))`;
+    // console.log('translateValue:', translateValue)
+
     const price = property.price ? <span className="property_price">{parseFloat(property?.price).toLocaleString()} €</span> : ""
     
     return (
 
-        <div index={index} key={property.id} className={`${page}_property property`} style={{transform: translateValue}}>
+        // <div index={index} key={property.id} className={`${page}_property property`} style={{transform: translateValue}}>
+          <div index={index} key={property.id} className={`${page}_property property`}>
             
             <div className={`${page}_img_container`}>
                 {price}
