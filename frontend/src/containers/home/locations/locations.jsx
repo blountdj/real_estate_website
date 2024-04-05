@@ -1,6 +1,7 @@
 import React from "react";
-import LocationsCarousel from "../../../components/locationsCarousel/locationsCarousel"; 
+// import LocationsCarousel from "../../../components/locationsCarousel/locationsCarousel"; 
 import useScrollVisibility from '../../../utilities/useScrollVisibility';
+import EmblemCarouselLocations from "../../../components/locationsCarousel/emblemCarouselLocations";
 import "./locations.scss";
 
 
@@ -16,7 +17,9 @@ const Locations = () => {
         <p className="locations_top_p">Exclusive properties in the best areas of Valencia and surroundings. We find the right place for you in the best locations.</p>
       </div>
 
-      <LocationsCarousel page="home" />
+      {/* <LocationsCarousel page="home" /> */}
+ 
+      <EmblemCarouselLocations />
 
     </section>
   )

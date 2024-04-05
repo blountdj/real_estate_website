@@ -1,5 +1,5 @@
 import React from "react";
-import ReviewsCarousel from "../../../components/reviewsCarousel/reviewsCarousel";
+import EmblemCarouselReviews from "../../../components/reviewsCarousel/emblemCarouselReviews";
 import useScrollVisibility from '../../../utilities/useScrollVisibility';
 import "./reviews.scss";
 
@@ -19,7 +19,7 @@ const Reviews = () => {
           <p className="reviews_p">These are the opinions of our customers.</p>
         </div>
         
-        <ReviewsCarousel page="home" />
+        <EmblemCarouselReviews />
 
     </section>
   )

@@ -1,6 +1,6 @@
 import { location_icon, size_icon, bed_icon, shower_icon, tag_icon } from './imports';
 import React, { useState, useEffect } from 'react';
-
+import './property_block.scss';
 
 const PropertyBlock = ({ index, page, property, currentImageIndex }) => {
 

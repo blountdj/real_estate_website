@@ -7,12 +7,12 @@ import {
 } from './EmblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
 
-import './base.scss'
-import './embla.scss'
+import './embla_base.scss'
+import './embla_main.scss'
 
 
 const EmblaCarousel = (props) => {
-  const { options, elements } = props
+  const { page, options, elements } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
@@ -23,21 +23,21 @@ const EmblaCarousel = (props) => {
     nextBtnDisabled,
     onPrevButtonClick,
     onNextButtonClick
-  } = usePrevNextButtons(emblaApi)
+  } = usePrevNextButtons(emblaApi, page)
 
   
   return (
-    <section className="embla">
-        <div className="embla__main_container">
-     <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
+    <section className={`${page}_embla embla`}>
+        <div className={`${page}_embla__main_container embla__main_container`}>
+     <PrevButton page={page} onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+      <div className={`${page}_embla__viewport embla__viewport`} ref={emblaRef}>
+        <div className={`${page}_embla__container embla__container`}>
           {elements.map((index) => (
-            <div className="embla__slide" key={index}>{index}</div>
+            <div className={`${page}_embla__slide embla__slide`} key={index}>{index}</div>
           ))}
         </div>
       </div>
-      <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+      <NextButton page={page} onClick={onNextButtonClick} disabled={nextBtnDisabled} />
       </div>
 
 

@@ -11,17 +11,20 @@
     z-index: 9998;
     color: white;
     transition: all 0.3s ease-in-out;
+    width: 100vw;
   }
   
   .navbar.scrolled {
     background-color: white;
     color: $color-text-heading-grey;
+    width: 100vw;
   }
     
 .home_navbar,
 .contact_navbar {
     padding-left: 40px;
     padding-right: 40px;
+    width: 100vw;
 }
 
 .logo {
