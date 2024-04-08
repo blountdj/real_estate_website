@@ -99,7 +99,7 @@
 
         &_image {
             // display: none; /* Hide links container when viewport width is less than 950px */
-            width: 55%;
+            // width: 55%;
             // height: 80%;
         }
     }
@@ -168,3 +168,60 @@
         }
     }
 }
+
+
+@media screen and (max-width: 800px) {
+.background_header.services {
+    @include backgroundImagePage('services-header-cropped.jpg');
+    height: 500px;
+}
+}
+
+
+@media screen and (max-width: 700px) {
+    .services_serviceBlock {
+        &_image {
+        width: 100%;
+        }
+        &_text {
+            width: 100%;
+            }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .services_serviceBlock_text_p {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .background_header.services {
+        height: 400px;
+    }
+    .services_info {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .services_info_container {
+        width: 100%;
+    }
+    .services_info_p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .background_header.services {
+        height: 350px;
+    }
+    .services_serviceBlock_text_p {
+        width: 100%;
+    }
+}
+
+    @media screen and (max-width: 400px) {
+        .background_header.services {
+            height: 350px;
+        }
+        }

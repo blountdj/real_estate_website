@@ -1,9 +1,7 @@
 import React from "react";
-// import PropertiesCarousel from '../../../components/propertiesCarousel/propertiesCarousel.jsx';
 import useScrollVisibility from '../../../utilities/useScrollVisibility';
 import EmblemCarouselProperties from "../../../components/propertiesCarousel/emblemCarouselProperties.jsx";
 import "./featured_listings.scss";
-import "../../../components/propertiesCarousel/propertiesCarousel.scss"
 
 
 const featuredListings = () => {
@@ -23,7 +21,7 @@ designs and services that make them truly unique and special.</p>
           <button className="featured_listings_button white">Rent</button>
         </div>
       </div>
-      {/* <PropertiesCarousel page="home" /> */}
+
       <EmblemCarouselProperties />
       <button className="featured_listings_button white" onClick={() => window.location.href = '/properties'}>SEE ALL PROPERTIES</button>
 

@@ -2,10 +2,10 @@
 @import "../../../mixins";
 
 .reviews {
-    @include flex(column, center, center, 32px);
+    @include flex(column, center, center, 3.2rem);
     /* width: 85%; */
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     transition: all 1s ease-in-out;
     opacity: 0;
     transform: translateY(25%);
@@ -15,18 +15,19 @@
         transform: translateY(0);
       }
 
-
     &_container {
         @include flex(column, center, center, 0);
+        text-align: center;
+        width: 90%;
     }
 
     &_h2 {
-        @include font($font-family-asul, 700, 21px, 25px, left, $color-text-heading-grey);
+        @include font($font-family-asul, 700, clamp(1.5rem, 10vw, 2.8rem), 2.5rem, left, $color-text-heading-grey);
         text-transform: uppercase;
     }
 
     &_p {
-        @include font($font-family-rambla, 400, 22px, 27px, left, $color-text-grey);
+        @include font($font-family-rambla, 400, clamp(1.2rem, 4vw, 2.2rem), 2.7rem, center, $color-text-grey);
         padding-top: 4px;
     }
 
@@ -50,7 +51,7 @@
 
     &_review {
         background-color: $color-review-background;
-        padding: 24px;
+        padding: 2.4rem;
         width: 100%;
         flex-shrink: 0;
         transition: transform 0.2s ease-in-out;
@@ -62,9 +63,9 @@
                 background-color: aqua;
                 border-radius: 50%;
                 text-transform: uppercase;
-                width: 50px;
-                height: 50px;
-                margin: 10px;
+                width: 5rem;
+                height: 5rem;
+                margin: 1rem;
                 margin-left: 0px;
                 @include font($font-family-rambla, 400, 24px, 20px, left, white);
             }
@@ -81,7 +82,7 @@
 
         &_review {
             @include font($font-family-rambla, 400, 14px, 20px, left, black);
-            height: 80px;
+            height: 8rem;
             overflow-y: scroll;
             padding-right: 16px;
         }

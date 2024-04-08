@@ -67,6 +67,16 @@
 
 @media screen and (max-width: 900px) {
     .whoWeAre_text_container {
-        width: 100%;
+        width: 90%;
+    }
+    .whoWeAre_text {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .whoWeAre_consultants_container {
+        @include flex(column, center, center, 20px);
     }
 }

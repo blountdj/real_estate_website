@@ -2,15 +2,15 @@
 @import "../../../mixins";
 
 .locations {
-    @include flex(column, center, center, 36px);
+    @include flex(column, center, center, 3.6rem);
     width: 100%;
     text-align: center;
-    padding-top: 60px;
-    padding-bottom: 120px;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
 
     &_top {
-        @include flex(column, center, center, 36px);
-        width: 60%;
+        @include flex(column, center, center, 3.6rem);
+        width: clamp(60%, 70vw, 80%);
         transition: all 1s ease-in-out;
         opacity: 0;
         transform: translateY(25%);
@@ -20,14 +20,13 @@
             transform: translateY(0);
           }
         
-
         &_h2 {
             text-transform: uppercase;
-            @include font($font-family-asul, 700, 21px, 25px, center, $color-text-heading-grey);
+            @include font($font-family-asul, 700, clamp(1.5rem, 10vw, 2.8rem), 25px, center, $color-text-heading-grey);
         }
 
         &_p {
-            @include font($font-family-rambla, 400, 22px, 27px, center, $color-text-grey);
+            @include font($font-family-rambla, 400, clamp(1.2rem, 4vw, 2.2rem), 27px, center, $color-text-grey);
         }
     }
 
@@ -41,14 +40,14 @@
 
     &_element {
         // position: relative;
-        height: 500px;
+        height: 50rem;
         overflow: hidden;
         width: 100%;
         flex-shrink: 0;
         transition: all 0.3s ease-in-out;
 
         &_img_container {
-            width: 150px;   
+            width: 15rem;   
             position: relative;
             width: 100%;
             @include flex(column, center, center, 0px);
@@ -59,7 +58,7 @@
 
             &_img {
                 width: 100%;
-                height: 500px;
+                height: 50rem;
                 object-fit: cover;
         
                 &s_row {
@@ -67,7 +66,6 @@
                     justify-content: space-between;
                     width: 100%;
                 }
-        
             }
         }
 
@@ -83,12 +81,12 @@
 
 
             &_text {
-                @include font($font-family-asul, 700, 30px, 36px, center, white);
+                @include font($font-family-asul, 700, 3rem, 3.6rem, center, white);
                 color: white;
             }
 
             &_button {
-                @include font($font-family-rambla, 400, 16px, 16px, center, transparent);
+                @include font($font-family-rambla, 400, 1.6rem, 1.6rem, center, transparent);
                 padding: 8px 16px;
                 cursor: none; 
                 border: none;
@@ -98,7 +96,7 @@
         }
 
         &:hover .locations_element_text_container {
-            transform: translateY(-200px);
+            transform: translateY(-20rem);
             transition: all 0.6s ease-in-out;
         }
 

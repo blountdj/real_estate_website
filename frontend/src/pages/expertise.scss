@@ -3,12 +3,21 @@
 
 .background_header.expertise {
     @include backgroundImagePage('expertise.jpg');
-    height: 500px;
+    // height: 500px;
+    // height: 300px;
+    height: clamp(300px, 45vw + 3rem, 500px);
+    padding-top: clamp(10px, 10vh, 30px);
 }
+
+
 
 .background_header.expertise2 {
     @include backgroundImagePage('sell_property.png');
     height: 500px;
+}
+
+h1.experpise_background_header {
+    font-size: clamp(3rem, 5vw, 6rem);
 }
 
 .expertise_info {
@@ -49,6 +58,7 @@
     }
 }
 
+
 @media screen and (max-width: 900px) {
     .expertise_info  {
         width: 100%;
@@ -62,6 +72,18 @@
             width: 100%;
         }
     }
+
+    .background_header.expertise2 {
+        @include backgroundImagePage('sell_property_cropped_right.png');
+        background-position: right;
+        height: 40rem;
+    }
+
+    h1.expertise2_background_header_text_h1._1 {
+        width: 90%;
+    }
+
+
 }
 
 @media screen and (max-width: 750px) {
@@ -70,17 +92,33 @@
         align-items: center;
         padding-left: 0px;
         padding-right: 0px;
-
-        // &_container {
-        //     width: 95%;
-        // }
         
         &_h2 {
             width: 90%;
         }
     }
 
-    .background_header.expertise2 {
-        height: 400px;
+    // .background_header.expertise2 {
+    //     height: 400px;
+    // }
+}
+
+// @media screen and (max-width: 600px) {
+//     .background_header.expertise {
+//         @include backgroundImagePage('expertise-cropped.png');
+//         height: 450px;
+//     }
+// }
+
+// @media screen and (max-width: 500px) {
+//     .background_header.expertise {
+//         @include backgroundImagePage('expertise-cropped.png');
+//         height: 375px;
+//     }
+// }
+
+@media screen and (max-width: 450px) {
+    h1.expertise_background_header_text_h1._1 {
+            width: 90%;
     }
 }

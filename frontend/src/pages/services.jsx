@@ -14,6 +14,7 @@ const ServicesPage = () => {
             <ServicesSection />
             <Info
                 page="services" 
+                index="0"
                 header="specialised in international clients" 
                 textList={["We help you with your trip to Spain and make sure your stay is comfortable. Our legal team, experts in the Golden Visa, will ensure that your transactions comply with all legal requirements."]} 
                 button="true"

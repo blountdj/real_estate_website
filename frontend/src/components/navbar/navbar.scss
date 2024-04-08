@@ -28,7 +28,7 @@
 }
 
 .logo {
-    width: 200px;
+    width: clamp(10rem, 20vw, 20rem);
     position: relative;
     z-index: 4;
 }

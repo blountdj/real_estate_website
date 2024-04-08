@@ -6,7 +6,7 @@
 
     &_ul {
         display: flex;
-        font-size: 16px;
+        font-size: clamp(1rem, 15vw, 3rem);
     }
 
     &_ul li {

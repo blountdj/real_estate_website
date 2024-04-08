@@ -91,3 +91,10 @@
     --reviews-slide-size: 100%;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .reviews_embla {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

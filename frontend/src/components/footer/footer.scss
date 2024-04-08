@@ -45,6 +45,7 @@
 
             &_ui {
                 @include flex(row, center, center, 32px);
+                @include font($font-family-rambla, 400, 2.4rem, 12px, left, #c4c7ca);
             }
         }
     }

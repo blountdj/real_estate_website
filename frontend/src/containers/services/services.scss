@@ -17,12 +17,12 @@
 
         &_h3 {
             text-transform: uppercase;
-            @include font($font-family-rambla, 700, 28px, 33px, left, $color-text-heading-grey);
+            @include font($font-family-rambla, 700, clamp(22px, 5vw, 28px), 33px, left, $color-text-heading-grey);
 
         }
                 
         &_p {
-            @include font($font-family-rambla, 400, 19px, 23px, left, $color-text-heading-grey);
+            @include font($font-family-rambla, 400, clamp(16px, 4vw, 19px), 23px, left, $color-text-heading-grey);
             width: 75%;
         }
     }

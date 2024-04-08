@@ -3,15 +3,15 @@
 
 .sell_property {
     @include backgroundImage('sell_property.png');
-    height: 500px;
+    height: 50rem;
     @include flex(column, flex-start, center, 0);
 
     color: white;
 
     &_container {
-        @include flex(column, flex-start, center, 20px);
-        margin-left: 150px;
-        width: 500px;
+        @include flex(column, flex-start, center, 2rem);
+        margin-left: 15rem;
+        width: 50rem;
         transition: all 1s ease-in-out;
         opacity: 0;
         transform: translateY(25%);
@@ -23,11 +23,11 @@
 
 
         &_h3 {
-            @include font($font-family-asul,  700, 30px, 36px, left, white);
+            @include font($font-family-asul,  700, clamp(2.6rem, 1vw + 1.25rem, 3rem), 3.6rem, left, white);
         }
 
         &_p {
-            @include font($font-family-rambla, 400, 16px, 19px, left, white);
+            @include font($font-family-rambla, 400, clamp(1.6rem, 1vw + 0.75rem, 2.2rem), 1.9rem, left, white);
             width: auto;
         }
 
@@ -54,18 +54,32 @@
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 100rem) {
     .sell_property_container {
-        margin-left: 100px;
+        margin-left: 10rem;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 80rem) {
     .sell_property_container {
-        margin-left: 60px;
+        margin-left: 6rem;
+        width: 70%;
         
     }
     .sell_property {
-        height: 400px;
+        @include backgroundImage('sell_property_cropped_right.png');
+        background-position: right;
     }
 }
+
+// @media screen and (max-width: 70rem) {
+//     .sell_property {
+//         // height: 40rem;
+//     }
+// }
+
+// @media screen and (max-width: 50rem) {
+//     .sell_property {
+//         // height: 50rem;
+//     }
+// }

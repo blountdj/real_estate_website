@@ -17,7 +17,7 @@ const Hero = () => {
             We provide you with properties in the most exclusive neighborhoods of Valencia,
             residential areas, and high standing developments in the metropolitan area</p>
       </div>
-      {/* <Filter page="home" more_filters="false" /> */}
+      <Filter page="home" more_filters="false" />
 
     </section>
   )

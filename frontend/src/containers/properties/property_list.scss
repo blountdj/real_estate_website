@@ -14,7 +14,7 @@
 }
 
 .property_list {
-    
+
     &_property {
     background-color: white; 
     box-shadow: $box-shadow-01;
@@ -25,6 +25,7 @@
     &_img_container {
         height: 300px;
         width: 100%;
+        overflow: hidden;
 
         &::after {
             @include overlay($box-shadow-01);
@@ -62,5 +63,11 @@ div.middle_line {
 @media screen and (max-width: 700px) {
     .properties_list {
         width: 80%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .properties_list {
+        width: 95%;
     }
 }

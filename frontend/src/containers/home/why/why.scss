@@ -3,12 +3,12 @@
 
 .why {
     @include flex(column, center, center, 32px);
-    padding-top: 60px;
-    padding-bottom: 80px;
+    padding-top: 6rem;
+    padding-bottom: 8rem;
 
     &_text {
-        @include flex(column, center, center, 32px);
-        padding-bottom: 32px;
+        @include flex(column, center, center, 3.2rem);
+        padding-bottom: 3.2rem;
         transition: all 1s ease-in-out;
         opacity: 0;
         transform: translateY(25%);
@@ -23,12 +23,12 @@
         display: grid;
         align-items: center;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 52px;
+        grid-gap: 5.2rem;
         width: 90%;
-        padding-bottom: 60px;
+        padding-bottom: 6rem;
         transition: all 1s ease-in-out;
-        opacity: 0;
-        transform: translateY(25%);
+        // opacity: 0;
+        // transform: translateY(25%);
 
         &.visible {
             opacity: 1;
@@ -37,11 +37,11 @@
     }
 
     &_h2 {
-        @include font($font-family-asul, 700, 21px, 25px, left, $color-text-heading-grey);
+        @include font($font-family-asul, 700, clamp(1.5rem, 10vw, 2.8rem), 25px, left, $color-text-heading-grey);
     }
 
     &_p {
-        @include font($font-family-rambla, 400, 22px, 27px, center, $color-text-grey);
+        @include font($font-family-rambla, 400, clamp(1.2rem, 4vw, 2.2rem), 27px, center, $color-text-grey);
         // width: 60%;
     }
 
@@ -108,6 +108,25 @@
         width: 90%;
     }
     .why_components {
+        width: 70%;
+        @include flex(column, center, center, 5rem);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .why_components {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .why_components {
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .why_components {
+        width: 100%;
     }
 }

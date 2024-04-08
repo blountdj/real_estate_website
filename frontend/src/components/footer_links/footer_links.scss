@@ -8,13 +8,15 @@ h3.footer_links_h3 {
 }
 
 li.footer_links_li {
-    @include font($font-family-rambla, 400, 13px, 15px, left, #c4c7ca);
+    @include font($font-family-rambla, 400, 24px, 13px, left, #c4c7ca);
     text-transform: capitalize;
     padding-top: 16px;
     transition: all 0.3s ease-in-out;
+    // color: pink;
 
     &:hover {
         color: white;
+        // color: green;
     }
 }
 

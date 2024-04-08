@@ -1,16 +1,15 @@
 import React from "react";
 import useScrollVisibility from '../../utilities/useScrollVisibility';
-import "./service_block.scss";
 
 
 const ServiceBlock = ({ page, index, title, text, side, button, button_text, image }) => {
 
   const isVisible = useScrollVisibility(`.${page}_serviceBlock_${index}`);
 
-  const buttonElement = button === "true" ? <button className={`${page}_serviceBlock_button ${side}`}>{button_text}</button> : ""
+  const buttonElement = button === "true" ? <button className={`${page}_serviceBlock_button ${side}`}>{`${button_text}`}</button> : ""
 
   return (
-    <div className={`${page}_serviceBlock ${page}_serviceBlock_${index} ${side} ${isVisible ? 'visible' : 'notVisible'}`} id="serviceBlock">
+    <div key={index} className={`${page}_serviceBlock ${page}_serviceBlock_${index} ${side} ${isVisible ? 'visible' : 'notVisible'}`} id="serviceBlock">
 
       <div className={`${page}_serviceBlock_text ${side}`}>
         <div className={`${page}_serviceBlock_text_holder`}>

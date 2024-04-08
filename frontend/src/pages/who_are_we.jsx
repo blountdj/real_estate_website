@@ -29,8 +29,7 @@ const WhoAreWe = () => {
                 </div>
             </div>
 
-            <div className={`whoWeAre_consultants ${isVisibleConsultants ? 'visible' : 'notVisible'}`}>
-                
+            <div className={`whoWeAre_consultants ${isVisibleConsultants ? 'visible' : 'notVisible'}`}>             
                 <div className="whoWeAre_consultants_container">
                     {consultants}
                 </div>

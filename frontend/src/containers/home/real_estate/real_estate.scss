@@ -65,3 +65,24 @@
         margin-left: 60px;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .realEstate_container, .realEstate_button {
+        margin-left: 4rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .realEstate_container, .realEstate_button {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .realEstate_container {
+        width: 90%;
+    }
+
+    .realEstate_p {
+        width: 100%;
+    }
+}

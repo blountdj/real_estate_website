@@ -14,9 +14,9 @@ const EmblemCarouselReviews = () => {
     let starsElem = [];
     for (let i = 0; i < review.stars; i++) {
       if (i < review.stars) {
-      starsElem.push(<img className="star_icon" src={star_yellow} alt="yellow star" />)
+      starsElem.push(<img key={i} className="star_icon" src={star_yellow} alt="yellow star" />)
       } else {
-        starsElem.push(<img className="star_icon" src={star_grey} alt="yellow grey" />)
+        starsElem.push(<img key={i} className="star_icon" src={star_grey} alt="yellow grey" />)
       }
     }
 

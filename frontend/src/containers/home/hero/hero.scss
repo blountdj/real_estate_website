@@ -5,7 +5,7 @@
     @include backgroundImage('hero_img.jpeg');
     height: 800px;
     position: relative;
-    @include flex(column, flex-start, center, 0);
+    @include flex(column, center, center, 0);
     color: white;
 
     &_text {
@@ -30,14 +30,17 @@
             position: relative;
         }
         &_h1 {
-            @include font($font-family-asul, 700, 60px, 72px, center, white);
+            // @include font($font-family-asul, 700, 6rem, 7.2rem, center, white);
+            @include font($font-family-asul, 700, clamp(2rem, 6vw, 6rem), 7.2rem, center, white);
+            // font-size: 6rem;
             text-transform: uppercase;
             z-index: 2;
             padding-bottom: 16px;
             
         }
         &_p {
-            font-size: 24px;
+            font-size: clamp(1rem, 2vw + 0.75rem, 2rem);
+            // font-size: 24px;
             text-align: center;
             width: 50%;
         }
@@ -55,10 +58,11 @@
     background-color: white;
     /* height: 150px; */
     width: 80%;
-    @include flex(row, flex-start, flex-start, 0px);
+    @include flex(row, center, center, 0px);
     position: absolute;
     bottom: -35px;
-    left: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 4;
     padding-left: 40px;
     padding-right: 40px;
@@ -85,7 +89,21 @@
   }
 
 
+  @media screen and (max-width: 1100px) {
+    .home_filter {
+        width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .home_filter {
+        width: 100%;
+    }
+  }
+
+
   @media screen and (max-width: 950px) {
+
     .hero_section_text_p {
         width: 80%;
     }
@@ -94,11 +112,69 @@
     }
 }
 
+@media screen and (max-width: 900px) {
+    .filter_form_container {
+        width: 125px;
+        justify-content: space-evenly;
+
+        &.double {
+            width: 200px;
+        }
+    }
+}
+
+
 @media screen and (max-width: 800px) {
+    .filter_form_container {
+        width: 100px;
+
+        &.double {
+            width: 200px;
+        }
+    }
     .hero_section {
         height: 600px;
     }
 }
   
-
+@media screen and (max-width: 700px) {
+    .price-dropdowns {
+        flex-direction: column;
+    }
+    .filter_form_container {
+        &.double {
+            width: 100px;
+        }
+    }
+}
   
+@media screen and (max-width: 600px) {
+
+    .filter_form_container {
+        width: 90px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .filter_form_container {
+        width: 150px;
+    }
+    .filter_form_container.property_type,
+    .filter_form_container.select_price {
+        display: none;;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .filter_form_container {
+        width: 125px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .filter_form_container {
+        width: 100px;
+        justify-content: center;
+    }
+}

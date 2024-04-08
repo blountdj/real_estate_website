@@ -2,14 +2,14 @@
 @import "../../../mixins";
 
 .featured_listings {
-    gap: 60px;
-    margin-top: 120px;
-    margin-bottom: 60px;
+    gap: 6rem;
+    margin-top: 12rem;
+    margin-bottom: 6rem;
     width: 100%;
 
     &_container {
         width: 60%;
-        @include flex(column, center, center, 40px);
+        @include flex(column, center, center, 4rem);
         transition: all 1s ease-in-out;
         opacity: 0;
         transform: translateY(25%);
@@ -21,14 +21,14 @@
     }
 
     &_h2 {
-        @include font($font-family-asul, 700, 21px, 21px, left, $color-text-heading-grey);
+        @include font($font-family-asul, 700, clamp(1.5rem, 10vw, 2.8rem), 2.1rem, center, $color-text-heading-grey);
         text-transform: uppercase;
     }
 
     &_p {
         color: $color-text-grey;
         text-align: center;
-        font-size: 22px;
+        font-size: clamp(1.6rem, 1vw + 0.75rem, 2.2rem);
     }
 
     &_button {
@@ -57,7 +57,7 @@
 }
 
 div.btns_container {
-    gap: 24px;
+    gap: 2.4rem;
 }
 
 @media screen and (max-width: 1000px) {

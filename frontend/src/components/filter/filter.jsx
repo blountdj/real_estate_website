@@ -21,7 +21,7 @@ const Filter = ({ page, more_filters }) => {
                 </select>
             </div>
 
-            <div className="filter_form_container divider">
+            <div className="filter_form_container property_type divider">
                 <label className="filter_form_container_label" htmlFor="property_type">Property Type</label>
                 <div className="select-category-container">
                     <select className="filter_form_container_select no_icon" id="property_type" name="property_type">
@@ -52,7 +52,7 @@ const Filter = ({ page, more_filters }) => {
                 </select>
             </div>
 
-            <div className="filter_form_container">
+            <div className="filter_form_container select_price double">
                 <label className="filter_form_container_label" htmlFor="price">Price:</label>
                 <div className="price-dropdowns flex-center">
                     <select className="filter_form_container_select select_price" id="min-price" name="min-price">

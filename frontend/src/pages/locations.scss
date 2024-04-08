@@ -113,6 +113,13 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .background_header.locations {
+        @include backgroundImagePage('locations-cropped.jpg');
+        height: 500px;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .locations_serviceBlock {
         height: fit-content;

@@ -117,6 +117,18 @@
     }
 }
 
+
+.services_serviceBlock {
+    &_button {
+        text-transform: uppercase;
+        background-color: transparent;
+        padding: 12px 24px;
+        width: fit-content;
+        @include font($font-family-rambla, 400, 15px, 18px, center, white);
+    }
+}
+
+
 @media screen and (max-width: 1000px) {
     .home_serviceBlock {
         width: 90%;
@@ -131,6 +143,8 @@
             padding-top: 40px;
             padding-bottom: 40px;
             width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
         &_image {
@@ -138,9 +152,24 @@
         }
 
         &.l, &.r {
-            width: 80%;
+            width: 90%;
             flex-direction: column-reverse;
             margin-bottom: 40px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .home_serviceBlock {
+        &_text {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        &.l, &.r {
+            width: 100%;
         }
     }
 }

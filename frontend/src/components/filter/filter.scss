@@ -9,6 +9,11 @@
 
         &_container {
             @include flex(column, flex-start, flex-start, 0px);
+            width: 150px;
+
+            &.double {
+                width: 250px;
+            }
 
             &_label {
                 @include font($font-family-rambla, 800, 14px, 14px, left, #565e69);
@@ -16,7 +21,7 @@
 
             &_select {
                 @include font($font-family-rambla, 400, 18px, 18px, left, #999);
-                width: 150px;
+                width: 100%;
                 border: none;
             }
         }

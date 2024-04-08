@@ -38,7 +38,7 @@
     }
 
     &_h2 {
-        @include font($font-family-asul, 700, 30px, 36px, left, white);
+        @include font($font-family-asul, 700, clamp(2rem, 1vw + 1.25rem, 3rem), 36px, left, white);
     }
 
     &_p {
@@ -83,12 +83,26 @@
     .campolivar_h2 {
         width: 80%;
     }
-
-
 }
 
 @media screen and (max-width: 1100px) {
     .campolivar_container, .campolivar_button {
         margin-left: 60px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .campolivar_p {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .campolivar_p {
+        width: 90%;
+    }
+
+    .campolivar_container, .campolivar_button {
+        margin-left: 3rem;
     }
 }
