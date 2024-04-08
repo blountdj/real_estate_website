@@ -1,6 +1,5 @@
-import './search_bar.scss'
-
 import search from '../../assets/icons/search_black.svg'
+import './search_bar.scss'
 
 const SearchBar = () => {
 
@@ -11,9 +10,6 @@ const SearchBar = () => {
             <input className='search-bar_input' type="text" placeholder="Search properties..." />
         </div>
     )
-     
-
-
 }
 
 export default SearchBar

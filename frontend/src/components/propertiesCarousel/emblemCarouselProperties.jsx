@@ -7,8 +7,8 @@ const EmblemCarouselProperties = () => {
 //   const { elements } = props
 
   const propertyArray = Object.entries(propertyDict);
-  const carouselElements = propertyArray.map(([key, value], index) =>  (
-        <PropertyBlock index={index} page={'home'} property={value} currentImageIndex={index}  />
+  const carouselElements = propertyArray.map(([key, value]) =>  (
+        <PropertyBlock id={key} page={'home'} property={value}  />
     )
   )
 

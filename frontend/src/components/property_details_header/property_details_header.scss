@@ -3,22 +3,24 @@
 
 .property_details_header {
 
-    &_top {
+    // background-color: aqua;
+    margin-top: 10.5rem;
 
+    &_top {
+    
         &_h1 {
             @include font($font-family-asul, 700, 30px, 36px, left, #333);
             text-transform: capitalize;
         }
-        
     }
 
     &_bottom {
-        @include flex(row, flex-start, space-between, 0px);
-        padding-top: 28px;
+        @include flex(row, center, space-between, 0px);
+        padding-top: 16px;
         padding-bottom: 16px;
 
         &_left {
-            @include flex(row, flex-start, flex-start, 36px);
+            @include flex(row, center, center, 36px);
 
             &_container {
                 @include flex(row, flex-end, center, 8px);
@@ -29,12 +31,21 @@
                     // @include flex(row, flex-end, center, 8px);
                     // height: 100%;
                 }
+
+                &_price {
+                    @include font($font-family-rambla, 400, 16px, 18px, left, $color-text-heading-grey);
+                    // padding-left: 16px;
+                }
             }
         }
 
         &_right {
             @include flex(row, center, flex-start, 24px);
             @include font($font-family-rambla, 400, 16px, 18px, left, $color-text-heading-grey);
+
+            &_a {
+                @include flex(row, center, center, 0px);            
+            }
 
             &_social {
                 border: 2px solid #999;
@@ -44,5 +55,20 @@
                 width: 30px;
             }
         }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .property_details_header_bottom {
+        @include flex(column, flex-start, space-between, 20px);
+        padding-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .property_details_header_bottom_left {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 16px;
     }
 }

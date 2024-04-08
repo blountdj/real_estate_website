@@ -24,7 +24,7 @@ const PropertyDetailsBody = ({ id }) => {
         <div className="property-details-body-container">
             <h3 className="property-details-body-h3">Other data</h3>
             {Object.entries(propertyDict[id]["other_data"]).map(([key, value]) => (
-                <p className="property-details-body-p" key={key}><span className='property-details-body-p-span'>{key}:</span>{value}</p>
+                <p className="property-details-body-p"><span className='property-details-body-p-span'>{key}:</span>{value}</p>
             ))}
         </div>
     ) : "";

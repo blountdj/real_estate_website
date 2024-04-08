@@ -7,6 +7,7 @@ import PropertyDetailsHeader from '../components/property_details_header/propert
 import propertyDict from '../data/propertyDict';
 import Navbar from '../components/navbar/navbar'
 
+
 const PropertyPage = () => {
     const { propertyId } = useParams()
     const img_ext = propertyDict[propertyId]["img_ext"]

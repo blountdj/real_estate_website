@@ -1,13 +1,11 @@
 import propertyDict from '../../data/propertyDict';
+import SocialShareBar from '../social_share_bar/social_share_bar';
 import {  walletIcon,
     locationIcon,
     tagIcon,
     sizeIcon,
     bedIcon,
-    showerIcon,
-    facebook,
-    twitter,
-    linkedin } from './imports';
+    showerIcon } from './imports';
 import './property_details_header.scss';
 
 const PropertyDetailsHeader = ({ id }) => {
@@ -48,7 +46,7 @@ const PropertyDetailsHeader = ({ id }) => {
             <div className="property_details_header_bottom">
                 <div className="property_details_header_bottom_left">
                     <div className="property_details_header_bottom_left_container">
-                        <img src={walletIcon} alt="" />{type} <span className='price_format'>{price}</span>
+                        <img src={walletIcon} alt="" />{type} <span className='property_details_header_bottom_left_container_price price_format'>{price}</span>
                     </div>
 
                     {location}
@@ -59,10 +57,7 @@ const PropertyDetailsHeader = ({ id }) => {
 
                 </div>
                 <div className="property_details_header_bottom_right">
-                    Share : 
-                    <a href="#"><img className="property_details_header_bottom_right_social" src={facebook} alt="facebook icon" /></a>
-                    <a href="#"><img className="property_details_header_bottom_right_social" src={twitter} alt="twitter icon" /></a>
-                    <a href="#"><img className="property_details_header_bottom_right_social" src={linkedin} alt="linkedin icon" /></a>
+                    <SocialShareBar />
                 </div>
             </div>
         </div>

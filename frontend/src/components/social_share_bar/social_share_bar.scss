@@ -1,0 +1,20 @@
+@import "../../variables";
+@import "../../mixins";
+
+
+.social_share_bar {
+    @include flex(row, center, flex-start, 24px);
+    @include font($font-family-rambla, 400, 16px, 18px, left, $color-text-heading-grey);
+
+    &_a {
+        @include flex(row, center, center, 0px);            
+    }
+
+    &_img {
+        border: 2px solid #999;
+        border-radius: 50%;
+        padding: 5px;
+        height: 30px;
+        width: 30px;
+    }
+}

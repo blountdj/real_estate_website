@@ -11,7 +11,6 @@ const PropertyBlock = ({ id, page, property }) => {
     
     return (
         <a key={id} href={`/properties/${id}`} target="_blank" className={`${page}_property ${page}_property_${id} ${isVisible ? 'visible' : 'notVisible'}`} >
-           {/* <div index={index} key={property.id} className={`${page}_property ${page}_property_${index} ${isVisible ? 'visible' : 'notVisible'}`}> */}
            <div index={id} key={property.id} className={`${page}_property ${page}_property_${id}`}>
             
               <div className={`${page}_img_container`}>
