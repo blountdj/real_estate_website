@@ -218,7 +218,7 @@ const PhotoGallerySmall = ({ id, img_ext }) => {
                     onClick={() => handleSliderOverlayButtonClickToggle(index)}
                 />
             ))}
-            <button className='photo-gallery-button' onClick={handleFullPageOverlayButtonClickToggle}>sell all pictures</button>
+            <button className='photo-gallery-button' onClick={handleFullPageOverlayButtonClickToggle}>see all pictures</button>
 
             {showFullPageOverlay && (
                 <div className="all_pictures_overlay">

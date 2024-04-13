@@ -3,6 +3,7 @@ import logoWhite from '../../assets/logos/logo.svg'
 import logoGrey from '../../assets/logos/logo_dark_grey.svg'
 import burgerBlack from '../../assets/icons/burger_black.svg'
 import burgerWhite from '../../assets/icons/burger_white.svg'
+import burgerGrey from '../../assets/icons/burger_grey.svg'
 import closeIcon from '../../assets/icons/close.svg'
 import NavbarLinks from '../navbarLinks/navbarLinks';
 import { useSharedState } from '../../utilities/SharedStateContext';
@@ -45,13 +46,13 @@ const Navbar = ({ layout, scroll_threshold }) => {
       : <a href="/"><img className="logo" src={logoWhite} alt="logo" /></a>
 
       burgerElem = scrolled 
-      ? burgerBlack 
+      ? burgerGrey 
       : burgerWhite
 
       navbarClass = scrolled ? 'scrolled' : 'not_scrolled';
     } else if (layout === "contact") {
       logoElem = <a href="/"><img className="logo" src={logoGrey} alt="logo" /></a> 
-      burgerElem = burgerBlack 
+      burgerElem = burgerGrey 
       navbarClass = 'scrolled';
     }else {
       logoElem = scrolled 

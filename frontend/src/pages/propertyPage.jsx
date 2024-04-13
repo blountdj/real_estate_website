@@ -20,7 +20,10 @@ const PropertyPage = () => {
             <PropertyDetailsHeader id={propertyId} />
             <PhotoGallerySmall id={propertyId} img_ext={img_ext} />
             <PropertyDetailsBody id={propertyId} />
-
+            <div className="property-details-body-container-button">
+                {/* <button className="property-details-body-container-button" onClick={() => console.log('contact')}>Contact</button> */}
+                <button className="property-details-body-container-button-button" onClick={() => console.log('contact')}>Contact</button>
+            </div>
             {/* carousel */}
         </>
     )

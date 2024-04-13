@@ -30,9 +30,9 @@ function App() {
               <Properties />
             </LayoutFull>}/>
 
-            <Route path="/properties/:propertyId" element={<LayoutPadding>
+            <Route path="/properties/:propertyId" element={<LayoutFull>
               <PropertyPage />
-            </LayoutPadding>}/>
+            </LayoutFull>}/>
 
             <Route path="/services" element={<LayoutFull>
               <ServicesPage />
@@ -58,21 +58,21 @@ function App() {
               <Contact />
             </LayoutFull>}/>
 
-            <Route path="/privacy_policy" element={<LayoutPadding>
+            <Route path="/privacy_policy" element={<LayoutFull>
               <Privacy />
-            </LayoutPadding>}/>
+            </LayoutFull>}/>
 
-            <Route path="/cookies_policy" element={<LayoutPadding>
+            <Route path="/cookies_policy" element={<LayoutFull>
               <Cookies />
-            </LayoutPadding>}/>
+            </LayoutFull>}/>
 
-            <Route path="/conditions" element={<LayoutPadding>
+            <Route path="/conditions" element={<LayoutFull>
               <Conditions />
-            </LayoutPadding>}/>
+            </LayoutFull>}/>
 
-            <Route path="*" element={<LayoutPadding>
+            <Route path="*" element={<LayoutFull>
               <NotFound />
-            </LayoutPadding>}/> {/* This route matches any path */}
+            </LayoutFull>}/> {/* This route matches any path */}
 
           </Routes>
         </Router>

@@ -3,10 +3,26 @@
 
 
 .property_details_section {
-    @include flex(row, flex-start, flex-start, 0px);
+    @include flex(row, flex-start, flex-start, 40px);
     padding-top: 36px;
     padding-bottom: 16px;
 }
+
+// .property-details-body-container-button {
+//     background-color: black; 
+//     padding: 12px;
+//     text-transform: uppercase;
+//     border: none;
+//     @include font($font-family-rambla, 400, 15px, 18px, center, white);
+//     width: 100%;
+//     z-index: 9999;
+//     position: fixed;
+//     bottom: 0;
+//     margin-left: $body-left-right-padding-clamp-main;  
+//     margin-right: $body-left-right-padding-clamp-main;  
+//     margin-right: 40px;  
+//     width: 100%;
+// }
 
 // .property_page_social {
 //     @include flex(row, center, flex-end, 0px);

@@ -3,7 +3,8 @@
 
 .property_details_header {
 
-    // background-color: aqua;
+    padding-left: $body-left-right-padding-clamp-main;
+    padding-right: $body-left-right-padding-clamp-main;
     margin-top: 10.5rem;
 
     &_top {

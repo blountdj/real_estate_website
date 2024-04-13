@@ -51,6 +51,10 @@ const PropertyDetailsBody = ({ id }) => {
                     <MapComponent coordinates={coordinates} />
                 </div>
 
+                
+                {/* <button className="property-details-body-container-button" onClick={() => console.log('contact')}>Contact</button> */}
+                
+
             </div>
             <ContactConsultant page="property-details-body" name={consultant} />
 

@@ -22,8 +22,8 @@
     
 .home_navbar,
 .contact_navbar {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: $body-left-right-padding-clamp-main;
+    padding-right: $body-left-right-padding-clamp-main;
     width: 100vw;
 }
 
@@ -75,6 +75,8 @@
     .burger-menu {
         display: block; /* Show burger menu icon */
         cursor: pointer;
+        // width: 10px;
+        // height: 10px;
     }
 }
 

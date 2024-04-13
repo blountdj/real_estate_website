@@ -12,6 +12,8 @@
   padding-top: 20px;
   width: 100%;
   position: relative;
+  padding-left: $body-left-right-padding-clamp-main;
+  padding-right: $body-left-right-padding-clamp-main;
 
   &-image {
     width: 100%;
@@ -27,15 +29,15 @@
 
   &-button {
     position: absolute;
-    bottom: 28px;
-    right: 28px;
+    bottom: 8px;
+    right: 48px;
     background-color: white;
     color: black;
-    padding: 12px 24px;
+    padding: 4px 12px;
     text-transform: uppercase;
     border: none;
     @include font($font-family-rambla, 400, 15px, 18px, center, #333);
-    cursor: pointer;
+
   }
 }
 
@@ -110,4 +112,11 @@
     height: 90%;
     // object-fit: cover;
   }
+}
+
+@media screen and (max-width: 1000px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    }
 }

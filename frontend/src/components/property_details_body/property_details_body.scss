@@ -5,12 +5,16 @@
 .property-details-section {
     position: relative;
     overflow: auto;
+    
 }
 
 .property-details-body {
+    position: relative;
     width: 60%;
     padding: 8px;
-    padding-right: 28px;
+    // padding-right: 28px;
+    padding-left: $body-left-right-padding-clamp-main;
+    padding-right: $body-left-right-padding-clamp-main;
 
     &-container {
         margin-bottom: 32px;
@@ -19,6 +23,26 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* Three columns */
             grid-gap: 10px; /* Adjust as needed */
+        }
+
+        &-button {  
+            justify-content: center;
+            display: none;
+            width: 100vw;
+            position: sticky;
+            bottom: 8px;
+            z-index: 9997;
+            margin-bottom: 4px;
+            
+            &-button {
+                background-color: black; 
+                padding: 8px;
+                text-transform: uppercase;
+                border: none;
+                @include font($font-family-rambla, 400, 15px, 18px, center, white);
+                flex-grow: 1;
+                margin: 0 $body-left-right-padding-clamp-main; ;
+              }
         }
     }
 
@@ -46,8 +70,22 @@
     &-contact-consultant {
         position: sticky;
         top: 0;
-        // background-color: green;
+        right: 40px;
+        
     }
 }
 
+@media screen and (max-width: 900px) {
+    .property-details-body {
+        width: 100%;
 
+        &-contact-consultant.contact-consultant {
+        display: none;
+        }
+
+        &-container-button {
+            display: flex;
+        }
+    }  
+
+}

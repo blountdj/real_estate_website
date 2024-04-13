@@ -6,7 +6,8 @@
 
     &_ul {
         display: flex;
-        font-size: clamp(1rem, 15vw, 3rem);
+        font-size: clamp(2.6rem, 3vw + 0.25rem, 3rem);
+        // color: pink;
     }
 
     &_ul li {
